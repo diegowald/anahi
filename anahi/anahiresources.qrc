@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>photo.jpg</file>
+    </qresource>
+    <qresource prefix="/auspiciantes">
+        <file>chistik.png</file>
+        <file>grupo-arroba.png</file>
+    </qresource>
+</RCC>
