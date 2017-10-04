@@ -1,33 +1,34 @@
 import QtQuick 2.7
 import QtQuick.Controls 2.0
 import QtQuick.Layouts 1.3
+import "PhotoViewerCore"
 
 Item {
+    id: item1
     property alias button1: button1
+    property alias button2: button2
 
     ColumnLayout {
+        anchors.bottom: parent.bottom
+        anchors.bottomMargin: 10
+        transformOrigin: Item.Center
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.topMargin: 20
-        anchors.top: parent.verticalCenter
+        anchors.top: parent
 
-        Label {
-            text: "N Encuentro Anahi de Rugby infantil!"
-            fontSizeMode: Text.HorizontalFit
-        }
-
+        RowLayout {
+            Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+            Layout.fillWidth: true
         Button {
             id: button1
-            text: qsTr("Como llegar?")
+            label: qsTr("Como llegar?")
         }
 
         Button {
             id: button2
-            text: qsTr("Historia")
-            onClicked: {
-                engine.launchHistoria();
-            }
+            label: qsTr("Historia")
         }
-
+        }
     }
 
     Image {
@@ -39,5 +40,4 @@ Item {
         fillMode: Image.PreserveAspectFit
         source: "qrc:///images/photo.jpg"
     }
-
 }

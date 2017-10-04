@@ -17,6 +17,8 @@ SOURCES += main.cpp \
     androidjni.cpp \
     selfdetachingjnienv.cpp \
     engine.cpp \
+    datosutilesmodel.cpp \
+    clubesmodel.cpp
 
 lupdate_only{
 SOURCES += *.qml \
@@ -29,7 +31,7 @@ RESOURCES += qml.qrc \
 
 
 # Additional import path used to resolve QML modules in Qt Creator's code model
-QML_IMPORT_PATH = PhotoViewerCore
+# QML_IMPORT_PATH = PhotoViewerCore
 
 # Additional import path used to resolve QML modules just for Qt Quick Designer
 QML_DESIGNER_IMPORT_PATH =
@@ -46,7 +48,8 @@ DISTFILES += \
     android/res/values/libs.xml \
     android/build.gradle \
     android/gradle/wrapper/gradle-wrapper.properties \
-    android/gradlew.bat
+    android/gradlew.bat \
+    ClubesDelegate.qml
 
 OTHER_FILES += \
     android/src/anahi/AnahiActivity.java \
@@ -56,4 +59,6 @@ ANDROID_PACKAGE_SOURCE_DIR = $$PWD/android
 HEADERS += \
     androidactivity.h \
     selfdetachingjnienv.h \
-    engine.h
+    engine.h \
+    datosutilesmodel.h \
+    clubesmodel.h

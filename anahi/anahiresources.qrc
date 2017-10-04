@@ -6,4 +6,29 @@
         <file>chistik.png</file>
         <file>grupo-arroba.png</file>
     </qresource>
+    <qresource prefix="/clubes">
+        <file>ClubCamarones.jpg</file>
+        <file>ClubLos50.jpg</file>
+        <file>ClubNecochea.jpg</file>
+        <file>ClubCentroNaval.jpg</file>
+        <file>ClubVillaMitre.png</file>
+        <file>ClubPalihue.jpg</file>
+        <file>clubElNacional.jpg</file>
+        <file>clubUniversitario.jpg</file>
+        <file>clubIndependientePuan.jpg</file>
+        <file>clubBigornia.png</file>
+        <file>clubDraigGoch.jpg</file>
+        <file>halcones.jpg</file>
+        <file>clubPringles.jpg</file>
+        <file>clubCoronelSuarez.jpg</file>
+        <file>clubPuntaAlta.jpg</file>
+        <file>clubSantaRosa.jpg</file>
+        <file>clubPuertoBelgrano.jpg</file>
+        <file>clubArgentino2.png</file>
+        <file>clubArgentino.png</file>
+        <file>clubArgentino.jpg</file>
+    </qresource>
+    <qresource prefix="/ui">
+        <file>pelotaRugby.png</file>
+    </qresource>
 </RCC>

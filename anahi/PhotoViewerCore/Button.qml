@@ -57,15 +57,19 @@ Item {
     property color tint: "transparent"
     signal clicked
 
-    width: labelText.width + 70 ; height: labelText.height + 18
+    width: labelText.width + 70 ; height: labelText.height + 30
 
-    BorderImage {
+    /*BorderImage {
         anchors { fill: container; leftMargin: -6; topMargin: -6; rightMargin: -8; bottomMargin: -8 }
         source: 'images/box-shadow.png'
         border.left: 10; border.top: 10; border.right: 10; border.bottom: 10
-    }
+    }*/
 
-    Image { anchors.fill: parent; source: "images/cardboard.png"; antialiasing: true }
+    //Image { anchors.fill: parent; source: "qrc:///ui/pelotaRugby.png"; antialiasing: true; fillMode: Image.PreserveAspectFit }
+    Image {
+        anchors { fill: container; leftMargin: -6; topMargin: -6; rightMargin: -8; bottomMargin: -8 }
+        source: "qrc:///ui/pelotaRugby.png"; antialiasing: true; fillMode: Image.PreserveAspectFit
+    }
 
     Rectangle {
         anchors.fill: container; color: container.tint; visible: container.tint != ""

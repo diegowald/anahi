@@ -60,7 +60,7 @@ Item {
     }*/
 
     Rectangle {
-        id: albumsShade; color: page5Form.color
+        id: albumsShade; //color: page5Form.color
         width: parent.width; height: parent.height; opacity: 0.0
     }
 

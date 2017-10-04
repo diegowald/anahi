@@ -5,7 +5,10 @@
         <file>Page1Form.ui.qml</file>
         <file>qtquickcontrols2.conf</file>
         <file>Page5.qml</file>
-                <file>PhotoViewerCore/AlbumDelegate.qml</file>
+        <file>SectionDelegate.qml</file>
+        <file>DatosUtilesDelegate.qml</file>
+        <file>ClubesDelegate.qml</file>
+        <file>PhotoViewerCore/AlbumDelegate.qml</file>
         <file>PhotoViewerCore/BusyIndicator.qml</file>
         <file>PhotoViewerCore/Button.qml</file>
         <file>PhotoViewerCore/EditableButton.qml</file>
