@@ -4,10 +4,10 @@ DatosUtilesModel::DatosUtilesModel(QObject *parent ) : QAbstractListModel(parent
 {
 /*    QString fullName;
 */
-    m_datoUtil.append( { "Lofts XYZ", "Brandsen 456", "Bahia Blanca", "4545454", "Alojamiento", DatoUtilType::Map });
-    m_datoUtil.append( { "Buscar Hoteles en Bahia Blanca", "", "Bahia Blanca", "", "Alojamiento", DatoUtilType::Web });
-    m_datoUtil.append({ "Andrea", "", "Bahia Blanca" , "1234", "Managers", DatoUtilType::WhatsApp });
-    m_datoUtil.append({ "Reglamento Rugby infantil", "", "", "", "Reglamento", DatoUtilType::Web });
+    m_datoUtil.append( { "Loft Rental", "Brandsen 456", "Bahia Blanca", "http://maps.google.com/maps?daddr=-38.7193941,-62.2544412", "Alojamiento", DatoUtilType::Map });
+    m_datoUtil.append( { "Buscar Hoteles en Bahia Blanca", "", "Bahia Blanca", "https://www.google.com.ar/search?q=hoteles+en+bahia+blanca", "Alojamiento", DatoUtilType::Web });
+    m_datoUtil.append({ "Andrea", "", "Bahia Blanca" , "+5492914147880", "Managers", DatoUtilType::WhatsApp });
+    m_datoUtil.append({ "Reglamento Rugby infantil", "", "", "http://www.clubchampagnat.com/wp-content/uploads/2015/03/Resumen_Reglamento_RI2015.jpg", "Reglamento", DatoUtilType::Web });
     m_datoUtil.append({ "IDEAS??", "", "", "", "IDEAS", DatoUtilType::Web });
 }
 

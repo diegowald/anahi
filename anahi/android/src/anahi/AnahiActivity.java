@@ -58,6 +58,31 @@ public class AnahiActivity extends org.qtproject.qt5.android.bindings.QtActivity
     return "OK";
   }
 
+  public static String launchMapNavigation(String location) {
+
+    Intent intent = new Intent(Intent.ACTION_VIEW, android.net.Uri.parse(location));
+    intent.setClassName("com.google.android.apps.maps", "com.google.android.maps.MapsActivity");
+    if (intent.resolveActivity(m_Instance.getPackageManager()) != null) {
+       m_Instance.startActivity(intent);
+    }
+    return "OK";
+  }
+
+  public static String call(String phoneNumber) {
+    Intent intent = new Intent(Intent.ACTION_CALL, android.net.Uri.parse("tel:" + phoneNumber));
+    m_Instance.startActivity(intent);
+    return "OK";
+  }
+
+  public static String sendWhatsApp(String phoneNumber) {
+    android.net.Uri uri = android.net.Uri.parse("smsto:" + phoneNumber);
+    Intent i = new Intent(Intent.ACTION_SENDTO, uri);
+    i.putExtra("sms_body", "sms");
+    i.setPackage("com.whatsapp");
+    m_Instance.startActivity(i);
+    return "OK";
+  }
+
   public native void onApplicationCreate();
   public native void onApplicationDestroy();
   public native void onApplicationStart();

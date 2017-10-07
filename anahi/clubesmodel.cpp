@@ -3,7 +3,7 @@
 ClubesModel::ClubesModel(QObject *parent) : QAbstractListModel(parent)
 {
     m_club.append({ "Club Argentino", "", "Bahia Blanca", "qrc:///clubes/clubArgentino.png", "Rugby", ClubType::Web });
-    m_club.append({ "Sociedad Sportiva", "", "Bahia Blanca", "", "Rugby", ClubType::Web });
+    m_club.append({ "Sociedad Sportiva", "", "Bahia Blanca", "qrc:///clubes/clubSportiva.jpg", "Rugby", ClubType::Web });
     m_club.append({ "Palihue Rugby y Hockeu", "", "Bahia Blanca", "qrc:///clubes/ClubPalihue.jpg", "Rugby", ClubType::Web });
     m_club.append({ "Club Universitario", "", "Bahia Blanca", "qrc:///clubes/clubUniversitario.jpg", "Rugby", ClubType::Web });
     m_club.append({ "El Nacional", "", "Bahia Blanca", "qrc:///clubes/clubElNacional.jpg", "Rugby", ClubType::Web });

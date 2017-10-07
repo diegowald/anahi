@@ -64,11 +64,16 @@ Flipable {
     signal backClicked
     signal tagChanged(string tag)
 
-    front: EditableButton {
+/*    front: EditableButton {
         id: frontButton; rotation: flipable.randomAngle
         anchors { centerIn: parent; verticalCenterOffset: -20 }
         onClicked: flipable.frontClicked()
         onLabelChanged: flipable.tagChanged(label)
+    }*/
+    front: Button {
+        id: frontButton; rotation: flipable.randomAngle
+        anchors { centerIn: parent; verticalCenterOffset: -20 }
+        onClicked: flipable.frontClicked()
     }
 
     back: Button {

@@ -5,6 +5,11 @@
     <qresource prefix="/auspiciantes">
         <file>chistik.png</file>
         <file>grupo-arroba.png</file>
+        <file>casaBernabe.png</file>
+        <file>colegioRosarioVeraPenaloza.png</file>
+        <file>conteba.png</file>
+        <file>motostart.png</file>
+        <file>tecnoServicios.png</file>
     </qresource>
     <qresource prefix="/clubes">
         <file>ClubCamarones.jpg</file>
@@ -27,8 +32,10 @@
         <file>clubArgentino2.png</file>
         <file>clubArgentino.png</file>
         <file>clubArgentino.jpg</file>
+        <file>clubSportiva.jpg</file>
     </qresource>
     <qresource prefix="/ui">
         <file>pelotaRugby.png</file>
+        <file>iconoAnahi48x48.png</file>
     </qresource>
 </RCC>

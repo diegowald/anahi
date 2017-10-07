@@ -2,6 +2,7 @@ import QtQuick 2.7
 import QtQuick.Controls 2.1
 import QtQuick.Layouts 1.3
 import Backend 1.0
+import "PhotoViewerCore"
 
 ApplicationWindow {
     visible: true
@@ -13,14 +14,41 @@ ApplicationWindow {
         id: timerLabel
     }*/
 
-    header: Label {
-        id: headerLabel
-        text: "XI ANAHI"
+    header: RowLayout {
+        spacing: 2
+        Image {
+            id: image
+            width: 100
+            height: 100
+            source: "qrc:/ui/iconoAnahi48x48.png"
+        }
+        ColumnLayout {
+            spacing: 2
+            Label {
+                id: headerLabel
+                text: "XI Encuentro Nacional de Rugby Infantil"
+                Layout.fillWidth: true
+                Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+                font.pointSize: 14
+                horizontalAlignment: Text.AlignHCenter
+                fontSizeMode: Text.HorizontalFit
+                font.bold: true
+            }
+            Label {
+                text: "Anahi Menna de Vila"
+                Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+                font.pointSize: 14
+                font.bold: true
+                horizontalAlignment: Text.AlignHCenter
+                fontSizeMode: Text.HorizontalFit
+            }
+        }
     }
 
 
     SwipeView {
         id: swipeView
+        antialiasing: true
         anchors.fill: parent
         currentIndex: tabBar.currentIndex
 
@@ -127,6 +155,8 @@ ApplicationWindow {
 
 
     footer: ColumnLayout {
+        antialiasing: true
+        spacing: 2
         Image {
             id: auspiciante
             source: engine.getImageAuspiciante(0)
@@ -170,7 +200,7 @@ ApplicationWindow {
     }*/
 
     Timer {
-        interval: 10000
+        interval: 4000
         running: true
         repeat: true
         onTriggered: {
