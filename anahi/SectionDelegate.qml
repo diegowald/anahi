@@ -3,7 +3,6 @@ import QtQuick.Controls 2.1
 
 ToolBar {
     id: background
-
     Label {
         id: label
         text: section

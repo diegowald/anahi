@@ -56,6 +56,7 @@ ApplicationWindow {
         }
 
         Page {
+            opacity: 0.8
             ColumnLayout {
                 ListView {
                     id: listViewClubes
@@ -93,6 +94,7 @@ ApplicationWindow {
         }
 
         Page {
+            opacity: 0.8
             ColumnLayout {
                 anchors.fill: parent
                 Label {
@@ -108,6 +110,7 @@ ApplicationWindow {
         }
 
         Page {
+            opacity: 0.8
             ColumnLayout {
                 //anchors.fill: parent
                 ListView {
@@ -116,6 +119,7 @@ ApplicationWindow {
                     height: 400
                     Layout.fillWidth: true
                     signal pressAndHold(int index)
+
 
                     focus: true
                     boundsBehavior: Flickable.StopAtBounds
@@ -133,6 +137,9 @@ ApplicationWindow {
                             target: delegate
                             onPressAndHold: listView.pressAndHold(index)
                         }
+                        background: Rectangle {
+                            color: "transparent"
+                        }
                     }
 
                     model: DatosUtilesModel {
@@ -146,12 +153,19 @@ ApplicationWindow {
         }
 
         Page5 {
-
+            opacity: 0.8
         }
 
     }
 
-
+    background: Image {
+        id: imageBackground
+        anchors.fill: parent
+        antialiasing: true
+        transformOrigin: Item.TopLeft
+        fillMode: Image.PreserveAspectFit
+        source: "qrc:///images/im1.jpeg"
+    }
 
 
     footer: ColumnLayout {
@@ -161,6 +175,7 @@ ApplicationWindow {
             id: auspiciante
             source: engine.getImageAuspiciante(0)
             property string url: engine.getURLAuspiciante(0)
+            Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
             MouseArea {
                 anchors.fill: auspiciante
                 onClicked: {
@@ -198,6 +213,13 @@ ApplicationWindow {
         repeat: true
         onTriggered: timerLabel.text = Date().toString();
     }*/
+
+    Timer {
+        interval: 10000
+        running: true
+        repeat: true
+        caca
+    }
 
     Timer {
         interval: 4000

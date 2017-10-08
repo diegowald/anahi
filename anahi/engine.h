@@ -15,7 +15,6 @@ public:
     Q_INVOKABLE static void launchHistoria();
 
 
-
     Q_INVOKABLE static int getIdAuspiciante();
     Q_INVOKABLE static QString getImageAuspiciante(int idAuspiciante);
     Q_INVOKABLE static QString getURLAuspiciante(int idAuspiciante);

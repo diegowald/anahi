@@ -14,7 +14,7 @@ Item {
         transformOrigin: Item.Center
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.topMargin: 20
-        anchors.top: parent
+        //anchors.top: parent.top
 
         RowLayout {
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
@@ -31,13 +31,5 @@ Item {
         }
     }
 
-    Image {
-        id: bgImage
-        z: -1
-        anchors.fill: parent
-        antialiasing: true
-        transformOrigin: Item.TopLeft
-        fillMode: Image.PreserveAspectFit
-        source: "qrc:///images/photo.jpg"
-    }
+
 }

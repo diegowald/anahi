@@ -23,6 +23,7 @@ void Engine::init()
     _auspiciantes[3] = QPair<QString, QString>("qrc:///auspiciantes/colegioRosarioVeraPenaloza.png", "http://www.colegioverapeñaloza.com.ar");
     _auspiciantes[4] = QPair<QString, QString>("qrc:///auspiciantes/conteba.png", "http://www.contebaservicios.com.ar/");
     _auspiciantes[5] = QPair<QString, QString>("qrc:///auspiciantes/tecnoServicios.png", "http://www.tecnoservicios.com.ar");
+    _auspiciantes[6] = QPair<QString, QString>("qrc:///auspiciantes/GreenAndClean.jpg", "http://www.gyclimpieza.com.ar");
     //_auspiciantes[0] = QPair<QString, QString>("CENTRO OPTICO LOURO -
     //        _auspiciantes[0] = QPair<QString, QString>("FRIGORIFICO VIÑUELA -
     //        _auspiciantes[0] = QPair<QString, QString>("YPF PARA YPF FULL -
