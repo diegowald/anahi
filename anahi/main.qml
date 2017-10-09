@@ -10,7 +10,7 @@ ApplicationWindow {
     height: 480
     title: qsTr("Anahi")
 
-/*    header: Label {
+    /*    header: Label {
         id: timerLabel
     }*/
 
@@ -93,7 +93,7 @@ ApplicationWindow {
             }
         }
 
-        Page {
+        /*Page {
             opacity: 0.8
             ColumnLayout {
                 anchors.fill: parent
@@ -107,7 +107,7 @@ ApplicationWindow {
                     text: "CONSEGUIR ESQUEMA DE DISTRIBUCION DE CANCHAS / BANIOS / ETC"
                 }
             }
-        }
+        }*/
 
         Page {
             opacity: 0.8
@@ -152,19 +152,73 @@ ApplicationWindow {
             }
         }
 
-        Page5 {
+        /*Page5 {
             opacity: 0.8
-        }
+        }*/
 
     }
 
-    background: Image {
+    /*background: Image {
         id: imageBackground
         anchors.fill: parent
         antialiasing: true
         transformOrigin: Item.TopLeft
         fillMode: Image.PreserveAspectFit
-        source: "qrc:///images/im1.jpeg"
+        source: engine.getBackgroundImage()
+    }
+    */
+
+    background: Item {
+        id: backgroundItem
+        anchors.fill: parent
+        states: [
+            State { // this will fade in rect2 and fade out rect
+                name: "fadeInRect2"
+                PropertyChanges { target: rect; opacity: 0}
+                PropertyChanges { target: rect2; opacity: 1}
+                PropertyChanges { target: rect2; source: engine.getBackgroundImage()}
+            },
+            State   { // this will fade in rect and fade out rect2
+                name:"fadeOutRect2"
+                PropertyChanges { target: rect;opacity:1}
+                PropertyChanges { target: rect2;opacity:0}
+                PropertyChanges { target: rect; source: engine.getBackgroundImage()}
+            }
+        ]
+
+        state: "fadeInRect2"
+
+        transitions: [
+            Transition {
+                NumberAnimation { property: "opacity"; easing.type: Easing.InOutQuad; duration: 1500  }
+            }
+        ]
+
+        Image {
+            id: rect2
+            smooth: true
+            opacity: 0
+            anchors.fill: parent
+            antialiasing: true
+            transformOrigin: Item.TopLeft
+            fillMode: Image.PreserveAspectFit
+            source: engine.getBackgroundImage()
+        }
+
+        Image {
+            id: rect
+            smooth: true
+            anchors.fill: parent
+            opacity: 1
+            antialiasing: true
+            transformOrigin: Item.TopLeft
+            fillMode: Image.PreserveAspectFit
+            source: engine.getBackgroundImage()
+        }
+
+        function toggle()   {
+            backgroundItem.state = backgroundItem.state == "fadeInRect2" ? "fadeOutRect2" : "fadeInRect2"
+        }
     }
 
 
@@ -176,6 +230,7 @@ ApplicationWindow {
             source: engine.getImageAuspiciante(0)
             property string url: engine.getURLAuspiciante(0)
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+            height: 150
             MouseArea {
                 anchors.fill: auspiciante
                 onClicked: {
@@ -195,30 +250,27 @@ ApplicationWindow {
             TabButton {
                 text: qsTr("Clubes")
             }
-            TabButton {
+            /*TabButton {
                 text: qsTr("Canchas")
-            }
+            }*/
             TabButton {
                 text: qsTr("INFO")
             }
-            TabButton {
+            /*TabButton {
                 text: qsTr("Fotos")
-            }
+            }*/
         }
     }
-
-    /*Timer {
-        interval: 500
-        running: true
-        repeat: true
-        onTriggered: timerLabel.text = Date().toString();
-    }*/
 
     Timer {
         interval: 10000
         running: true
         repeat: true
-        caca
+        onTriggered: {
+            //imageBackground.source = engine.getBackgroundImage();
+            backgroundItem.toggle();
+            console.info("toggle");
+        }
     }
 
     Timer {

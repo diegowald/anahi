@@ -6,6 +6,7 @@
 #include <QDebug>
 #include <QMap>
 #include <QPair>
+#include <cstdlib>
 
 QMap<int, QPair<QString, QString>> Engine::_auspiciantes;
 int Engine::_currentIdAuspiciante = 0;
@@ -24,7 +25,9 @@ void Engine::init()
     _auspiciantes[4] = QPair<QString, QString>("qrc:///auspiciantes/conteba.png", "http://www.contebaservicios.com.ar/");
     _auspiciantes[5] = QPair<QString, QString>("qrc:///auspiciantes/tecnoServicios.png", "http://www.tecnoservicios.com.ar");
     _auspiciantes[6] = QPair<QString, QString>("qrc:///auspiciantes/GreenAndClean.jpg", "http://www.gyclimpieza.com.ar");
-    //_auspiciantes[0] = QPair<QString, QString>("CENTRO OPTICO LOURO -
+    _auspiciantes[7] = QPair<QString, QString>("qrc:///auspiciantes/duoseguros.jpg", "mailto:edullorens@gmail.com");
+    _auspiciantes[8] = QPair<QString, QString>("qrc:///auspiciantes/centroOpticoLouro.jpg", "http://www.facebook.com/Centro-Optico");
+
     //        _auspiciantes[0] = QPair<QString, QString>("FRIGORIFICO VIÑUELA -
     //        _auspiciantes[0] = QPair<QString, QString>("YPF PARA YPF FULL -
     //_auspiciantes[4] = QPair<QString, QString>("CERVEZA IMPERIAL COCA - COLA -
@@ -112,4 +115,11 @@ QString Engine::getImageAuspiciante(int idAuspiciante)
 QString Engine::getURLAuspiciante(int idAuspiciante)
 {
     return _auspiciantes[idAuspiciante].second;
+}
+
+QString Engine::getBackgroundImage()
+{
+    QString resource = "qrc:///images/im%1.jpg";
+    int i = rand() % 12 + 1;
+    return resource.arg(i);
 }

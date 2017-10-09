@@ -19,6 +19,8 @@ public:
     Q_INVOKABLE static QString getImageAuspiciante(int idAuspiciante);
     Q_INVOKABLE static QString getURLAuspiciante(int idAuspiciante);
 
+    Q_INVOKABLE static QString getBackgroundImage();
+
     Q_INVOKABLE static void launchURL(const QString &url);
 
 

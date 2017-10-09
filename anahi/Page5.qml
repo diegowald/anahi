@@ -68,7 +68,7 @@ Item {
 
     Button {
         id: backButton
-        label: qsTr("Back")
+        label: qsTr("Volver")
         rotation: 3
         x: parent.width - backButton.width - 6
         y: -backButton.height - 8

@@ -1,6 +1,17 @@
 <RCC>
     <qresource prefix="/images">
-        <file>photo.jpg</file>
+        <file>im5.jpg</file>
+        <file>im1.jpg</file>
+        <file>im2.jpg</file>
+        <file>im3.jpg</file>
+        <file>im4.jpg</file>
+        <file>im7.jpg</file>
+        <file>im8.jpg</file>
+        <file>im9.jpg</file>
+        <file>im10.jpg</file>
+        <file>im11.jpg</file>
+        <file>im12.jpg</file>
+        <file>im6.jpg</file>
     </qresource>
     <qresource prefix="/auspiciantes">
         <file>chistik.png</file>
@@ -10,6 +21,9 @@
         <file>conteba.png</file>
         <file>motostart.png</file>
         <file>tecnoServicios.png</file>
+        <file>GreenAndClean.jpg</file>
+        <file>duoseguros.jpg</file>
+        <file>centroOpticoLouro.jpg</file>
     </qresource>
     <qresource prefix="/clubes">
         <file>ClubCamarones.jpg</file>
