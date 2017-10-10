@@ -53,6 +53,7 @@ ApplicationWindow {
         currentIndex: tabBar.currentIndex
 
         Page1 {
+            opacity: 0.8
         }
 
         Page {
@@ -243,18 +244,22 @@ ApplicationWindow {
 
         TabBar {
             id: tabBar
+            Layout.fillWidth: true
             currentIndex: swipeView.currentIndex
             TabButton {
                 text: qsTr("Anahi")
             }
             TabButton {
                 text: qsTr("Clubes")
+                font.capitalization: Font.Capitalize
             }
             /*TabButton {
                 text: qsTr("Canchas")
             }*/
             TabButton {
-                text: qsTr("INFO")
+                width: 65
+                text: qsTr("Informacion")
+                font.capitalization: Font.Capitalize
             }
             /*TabButton {
                 text: qsTr("Fotos")

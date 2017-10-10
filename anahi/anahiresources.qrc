@@ -24,6 +24,7 @@
         <file>GreenAndClean.jpg</file>
         <file>duoseguros.jpg</file>
         <file>centroOpticoLouro.jpg</file>
+        <file>atria.png</file>
     </qresource>
     <qresource prefix="/clubes">
         <file>ClubCamarones.jpg</file>

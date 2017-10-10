@@ -11,6 +11,7 @@ DatosUtilesModel::DatosUtilesModel(QObject *parent ) : QAbstractListModel(parent
     m_datoUtil.append( { "Buscar Restaurantes en Bahia Blanca", "", "Bahia Blanca", "https://www.google.com.ar/search?q=restaurantes+en+bahia+blanca", "Para Padres", DatoUtilType::Web });
     m_datoUtil.append( { "Buscar Farmacias en Bahia Blanca", "", "Bahia Blanca", "https://www.google.com.ar/search?q=farmacias+en+bahia+blanca", "Para Padres", DatoUtilType::Web });
     m_datoUtil.append( { "Buscar Hospitales en Bahia Blanca", "", "Bahia Blanca", "https://www.google.com.ar/search?q=hospital+en+bahia+blanca", "Para Padres", DatoUtilType::Web });
+    m_datoUtil.append( { "Buscar Taxi en Bahia Blanca", "", "Bahia Blanca", "https://www.google.com.ar/search?q=taxi+en+bahia+blanca", "Para Padres", DatoUtilType::Web });
 }
 
 int DatosUtilesModel::rowCount(const QModelIndex &) const
