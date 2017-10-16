@@ -1,56 +1,57 @@
 <RCC>
     <qresource prefix="/images">
-        <file>im5.jpg</file>
-        <file>im1.jpg</file>
-        <file>im2.jpg</file>
-        <file>im3.jpg</file>
-        <file>im4.jpg</file>
-        <file>im7.jpg</file>
-        <file>im8.jpg</file>
-        <file>im9.jpg</file>
-        <file>im10.jpg</file>
-        <file>im11.jpg</file>
-        <file>im12.jpg</file>
-        <file>im6.jpg</file>
+        <file alias="im5.jpg">img/backgrounds/im5.jpg</file>
+        <file alias="im1.jpg">img/backgrounds/im1.jpg</file>
+        <file alias="im2.jpg">img/backgrounds/im2.jpg</file>
+        <file alias="im3.jpg">img/backgrounds/im3.jpg</file>
+        <file alias="im4.jpg">img/backgrounds/im4.jpg</file>
+        <file alias="im7.jpg">img/backgrounds/im7.jpg</file>
+        <file alias="im8.jpg">img/backgrounds/im8.jpg</file>
+        <file alias="im9.jpg">img/backgrounds/im9.jpg</file>
+        <file alias="im10.jpg">img/backgrounds/im10.jpg</file>
+        <file alias="im11.jpg">img/backgrounds/im11.jpg</file>
+        <file alias="im12.jpg">img/backgrounds/im12.jpg</file>
+        <file alias="im6.jpg">img/backgrounds/im6.jpg</file>
     </qresource>
     <qresource prefix="/auspiciantes">
-        <file>chistik.png</file>
-        <file>grupo-arroba.png</file>
-        <file>casaBernabe.png</file>
-        <file>colegioRosarioVeraPenaloza.png</file>
-        <file>conteba.png</file>
-        <file>motostart.png</file>
-        <file>tecnoServicios.png</file>
-        <file>GreenAndClean.jpg</file>
-        <file>duoseguros.jpg</file>
-        <file>centroOpticoLouro.jpg</file>
-        <file>atria.png</file>
+        <file alias="chistik.png">img/auspiciantes/chistik.png</file>
+        <file alias="grupo-arroba.png">img/auspiciantes/grupo-arroba.png</file>
+        <file alias="casaBernabe.png">img/auspiciantes/casaBernabe.png</file>
+        <file alias="colegioRosarioVeraPenaloza.png">img/auspiciantes/colegioRosarioVeraPenaloza.png</file>
+        <file alias="conteba.png">img/auspiciantes/conteba.png</file>
+        <file alias="motostart.png">img/auspiciantes/motostart.png</file>
+        <file alias="tecnoServicios.png">img/auspiciantes/tecnoServicios.png</file>
+        <file alias="GreenAndClean.jpg">img/auspiciantes/GreenAndClean.jpg</file>
+        <file alias="duoseguros.jpg">img/auspiciantes/duoseguros.jpg</file>
+        <file alias="centroOpticoLouro.jpg">img/auspiciantes/centroOpticoLouro.jpg</file>
+        <file alias="atria.png">img/auspiciantes/atria.png</file>
+        <file alias="vinuelaCarnes.jpg">img/auspiciantes/vinuelaCarnes.jpg</file>
     </qresource>
     <qresource prefix="/clubes">
-        <file>ClubCamarones.jpg</file>
-        <file>ClubLos50.jpg</file>
-        <file>ClubNecochea.jpg</file>
-        <file>ClubCentroNaval.jpg</file>
-        <file>ClubVillaMitre.png</file>
-        <file>ClubPalihue.jpg</file>
-        <file>clubElNacional.jpg</file>
-        <file>clubUniversitario.jpg</file>
-        <file>clubIndependientePuan.jpg</file>
-        <file>clubBigornia.png</file>
-        <file>clubDraigGoch.jpg</file>
-        <file>halcones.jpg</file>
-        <file>clubPringles.jpg</file>
-        <file>clubCoronelSuarez.jpg</file>
-        <file>clubPuntaAlta.jpg</file>
-        <file>clubSantaRosa.jpg</file>
-        <file>clubPuertoBelgrano.jpg</file>
-        <file>clubArgentino2.png</file>
-        <file>clubArgentino.png</file>
-        <file>clubArgentino.jpg</file>
-        <file>clubSportiva.jpg</file>
+        <file alias="ClubCamarones.jpg">img/clubes/ClubCamarones.jpg</file>
+        <file alias="ClubLos50.jpg">img/clubes/ClubLos50.jpg</file>
+        <file alias="ClubNecochea.jpg">img/clubes/ClubNecochea.jpg</file>
+        <file alias="ClubCentroNaval.jpg">img/clubes/ClubCentroNaval.jpg</file>
+        <file alias="ClubVillaMitre.png">img/clubes/ClubVillaMitre.png</file>
+        <file alias="ClubPalihue.jpg">img/clubes/ClubPalihue.jpg</file>
+        <file alias="clubElNacional.jpg">img/clubes/clubElNacional.jpg</file>
+        <file alias="clubUniversitario.jpg">img/clubes/clubUniversitario.jpg</file>
+        <file alias="clubIndependientePuan.jpg">img/clubes/clubIndependientePuan.jpg</file>
+        <file alias="clubBigornia.png">img/clubes/clubBigornia.png</file>
+        <file alias="clubDraigGroch.jpg">img/clubes/clubDraigGoch.jpg</file>
+        <file alias="halcones.jpg">img/clubes/halcones.jpg</file>
+        <file alias="clubPringles.jpg">img/clubes/clubPringles.jpg</file>
+        <file alias="clubCoronelSuarez.jpg">img/clubes/clubCoronelSuarez.jpg</file>
+        <file alias="clubPuntaAlta.jpg">img/clubes/clubPuntaAlta.jpg</file>
+        <file alias="clubSantaRosa.jpg">img/clubes/clubSantaRosa.jpg</file>
+        <file alias="clubPuertoBelgrano.jpg">img/clubes/clubPuertoBelgrano.jpg</file>
+        <file alias="clubArgentino2.png">img/clubes/clubArgentino2.png</file>
+        <file alias="clubArgentino.png">img/clubes/clubArgentino.png</file>
+        <file alias="clubArgentino.jpg">img/clubes/clubArgentino.jpg</file>
+        <file alias="clubSportiva.jpg">img/clubes/clubSportiva.jpg</file>
     </qresource>
     <qresource prefix="/ui">
-        <file>pelotaRugby.png</file>
-        <file>iconoAnahi48x48.png</file>
+        <file alias="pelotaRugby.png">img/pelotaRugby.png</file>
+        <file alias="iconoAnahi48x48.png">img/iconoAnahi48x48.png</file>
     </qresource>
 </RCC>

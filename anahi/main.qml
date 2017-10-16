@@ -2,6 +2,8 @@ import QtQuick 2.7
 import QtQuick.Controls 2.1
 import QtQuick.Layouts 1.3
 import Backend 1.0
+import QtPositioning 5.8
+import QtLocation 5.9
 import "PhotoViewerCore"
 
 ApplicationWindow {
@@ -13,6 +15,9 @@ ApplicationWindow {
     /*    header: Label {
         id: timerLabel
     }*/
+
+    property variant locationClub: QtPositioning.coordinate( -38.715921, -62.208452 )
+
 
     header: RowLayout {
         spacing: 2
@@ -47,17 +52,19 @@ ApplicationWindow {
 
 
     SwipeView {
+        clip: true
         id: swipeView
         antialiasing: true
         anchors.fill: parent
         currentIndex: tabBar.currentIndex
+        opacity: 0.8
 
         Page1 {
-            opacity: 0.8
+        //    opacity: 0.8
         }
 
         Page {
-            opacity: 0.8
+          //  opacity: 0.8
             ColumnLayout {
                 ListView {
                     id: listViewClubes
@@ -94,24 +101,191 @@ ApplicationWindow {
             }
         }
 
-        /*Page {
+        Page {
+            Plugin {
+                id: mapPlugin
+                name: "osm" // "mapboxgl", "esri", ...
+                //specify plugin parameters if necessary
+                //PluginParameter {...}
+                //PluginParameter {...}
+                //...
+            }
+
             opacity: 0.8
             ColumnLayout {
                 anchors.fill: parent
-                Label {
-                    text: qsTr("Canchas")
+
+
+
+
+                PositionSource {
+                    id: positionSource
+                    property variant lastSearchPosition: locationClub
+                    active: true
+                    updateInterval: 120000 // 2 mins
+                    onPositionChanged:  {
+                        var currentPosition = positionSource.position.coordinate
+                        var distance = currentPosition.distanceTo(lastSearchPosition)
+                        if (distance < 2000) {
+                            map.center = currentPosition
+                            lastSearchPosition = currentPosition
+                          //  searchModel.searchArea = QtPositioning.circle(currentPosition)
+                          //  searchModel.update()
+                        }
+                        else {
+                            map.center = locationClub
+                        }
+                    }
                 }
-                Label {
-                    text: "Aca puede estar el diagrama de ubicacion de las canchas. Banios, 3er tiempo. Donde comprar comida"
+
+                Map {
+                    RowLayout {
+                        width: parent.width
+                        Label {
+                            text: qsTr("Mostrar")
+                        }
+
+                        ComboBox {
+                            id: comboMuestra
+                            currentIndex: 0
+
+                            model: [
+                                "Todo",
+                                "Estacionamiento",
+                                "Baños",
+                                "3er Tiempo",
+                                "Comprar",
+                                "Canchas Escuelita",
+                                "Canchas M8-M9",
+                                "Canchas M10",
+                                "Canchas M11",
+                                "Canchas M12",
+                                "Canchas M13",
+                                "Canchas M14"
+                            ]
+                        }
+                    }
+
+                    id: map
+                    anchors.fill: parent
+                    plugin: mapPlugin;
+                    center: locationClub
+                    zoomLevel: 16
                 }
-                Label {
-                    text: "CONSEGUIR ESQUEMA DE DISTRIBUCION DE CANCHAS / BANIOS / ETC"
+
+                Map {
+                    id: mapOverlay
+                    color: "transparent"
+                    anchors.fill: parent
+                    plugin: Plugin {
+                        name: "itemsoverlay"
+                    }
+                    gesture.enabled: false
+                    center: map.center
+
+                    minimumFieldOfView: map.minimumFieldOfView
+                    maximumFieldOfView: map.maximumFieldOfView
+
+                    minimumTilt: map.minimumTilt
+                    maximumTilt: map.maximumTilt
+
+                    minimumZoomLevel: map.minimumZoomLevel
+                    maximumZoomLevel: map.maximumZoomLevel
+
+                    zoomLevel: map.zoomLevel
+
+                    tilt: map.tilt
+
+                    bearing: map.bearing
+                    fieldOfView: map.fieldOfView
+
+                    z: map.z + 1
+
+
+                    MapPolygon {
+                        id: estacionamiento
+                        color: "gray"
+                        MouseArea {
+                            id: estacienamientoMA
+                            anchors.fill: parent
+                        }
+
+                        opacity: 0.5
+
+                        path: [
+                            { latitude: -38.7110903, longitude: -62.2086132 },
+                            { latitude: -38.7143384, longitude: -62.2038925 },
+                            { latitude: -38.7152258, longitude: -62.2048903 },
+                            { latitude: -38.7118353, longitude: -62.2095144}
+                        ]
+                        ToolTip.visible: estacienamientoMA.pressed
+                        ToolTip.text: "Estacionamiento"
+
+                        Connections {
+                            target: comboMuestra
+                            onCurrentIndexChanged: {
+                                estacionamiento.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 1));
+                            }
+                        }
+                    }
+
+                    MapPolygon {
+                        id: canchasEscuelita
+                    }
+
+                    MapPolygon {
+                        id: canchasM8M9
+                    }
+
+                    MapPolygon {
+                        id: canchasM10
+                    }
+
+                    MapPolygon {
+                        id: canchasM11
+                    }
+
+                    MapPolygon {
+                        id: canchasM12
+                    }
+
+                    MapPolygon {
+                        id: canchasM13
+                    }
+
+                    MapPolygon {
+                        id: canchasM14
+                    }
+
+                    MapCircle {
+                        id: casitaAzul
+                    }
+
+                    MapCircle {
+                        id: clubHouse
+                    }
+
+                    MapPolygon {
+                        id: banios
+                    }
+
+                    MapPolygon {
+                        id: sector3erTiempo
+                    }
+
+
+                    layer.enabled: true
+                    layer.smooth: true
+                    property int w: mapOverlay.width
+                    property int h: mapOverlay.height
+                    //property int pr: Screen.devicePixelRatio
+                      layer.textureSize: Qt.size(w  * 2 /** pr*/, h * 2 /** pr*/)
                 }
             }
-        }*/
+        }
 
         Page {
-            opacity: 0.8
+        //    opacity: 0.8
             ColumnLayout {
                 //anchors.fill: parent
                 ListView {
@@ -247,18 +421,20 @@ ApplicationWindow {
             Layout.fillWidth: true
             currentIndex: swipeView.currentIndex
             TabButton {
-                text: qsTr("Anahi")
+                text: qsTr("Anahí")
+                font.capitalization: Font.Capitalize
             }
             TabButton {
                 text: qsTr("Clubes")
                 font.capitalization: Font.Capitalize
             }
-            /*TabButton {
+            TabButton {
                 text: qsTr("Canchas")
-            }*/
+                font.capitalization: Font.Capitalize
+            }
             TabButton {
                 width: 65
-                text: qsTr("Informacion")
+                text: qsTr("Info")
                 font.capitalization: Font.Capitalize
             }
             /*TabButton {

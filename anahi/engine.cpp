@@ -28,8 +28,7 @@ void Engine::init()
     _auspiciantes[7] = QPair<QString, QString>("qrc:///auspiciantes/duoseguros.jpg", "mailto:edullorens@gmail.com");
     _auspiciantes[8] = QPair<QString, QString>("qrc:///auspiciantes/centroOpticoLouro.jpg", "http://www.facebook.com/Centro-Optico");
     _auspiciantes[9] = QPair<QString, QString>("qrc:///auspiciantes/atria.png", "");
-
-    //        _auspiciantes[0] = QPair<QString, QString>("FRIGORIFICO VIÑUELA -
+    _auspiciantes[10] = QPair<QString, QString>("qrc:///auspiciantes/vinuelaCarnes.jpg", "https://www.facebook.com/Vi%C3%B1uela-Carnes-1710966449141800/");
     //        _auspiciantes[0] = QPair<QString, QString>("YPF PARA YPF FULL -
     //_auspiciantes[4] = QPair<QString, QString>("CERVEZA IMPERIAL COCA - COLA -
 }
@@ -38,7 +37,7 @@ void Engine::launchMap()
 {
     QAndroidJniObject result = QAndroidJniObject::callStaticObjectMethod<jstring>("anahi/AnahiActivity",
                                                                                   "startMapNavigation"/*,
-                                                                                                                         "()Ljava/lang/String;"*/);
+                                                                              "()Ljava/lang/String;"*/);
     qDebug() << result.toString();
 }
 
