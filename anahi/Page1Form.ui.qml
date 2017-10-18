@@ -7,6 +7,7 @@ Item {
     id: item1
     property alias button1: button1
     property alias button2: button2
+    property alias descargarRevista: descargarRevista
 
     Rectangle {
         color: "#ffffff"
@@ -34,6 +35,8 @@ Item {
             Button {
                 id: descargarRevista
                 label: "Revista"
+                property date currentDate: new Date()
+                visible: engine.downloadEnabled();
             }
 
             Button {

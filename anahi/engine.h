@@ -28,6 +28,9 @@ public:
     Q_INVOKABLE static void call(const QString &phoneNumber);
     Q_INVOKABLE static void sendWhatsApp(const QString &phoneNumber);
 
+    Q_INVOKABLE static void download(const QString &url);
+    Q_INVOKABLE static bool downloadEnabled();
+
 
 private:
     static QMap<int, QPair<QString, QString>> _auspiciantes;

@@ -7,6 +7,7 @@
 #include <QMap>
 #include <QPair>
 #include <cstdlib>
+#include <QDateTime>
 
 QMap<int, QPair<QString, QString>> Engine::_auspiciantes;
 int Engine::_currentIdAuspiciante = 0;
@@ -91,6 +92,25 @@ void Engine::sendWhatsApp(const QString &phoneNumber)
     qDebug() << result.toString();
 }
 
+void Engine::download(const QString &url)
+{
+    QAndroidJniObject result = QAndroidJniObject::callStaticObjectMethod("anahi/AnahiActivity",
+                                                                         "download",
+                                                                         "(Ljava/lang/String;)Ljava/lang/String;",
+                                                                         QAndroidJniObject::fromString(url).object<jstring>()
+                                                                         );
+    qDebug() << result.toString();
+}
+
+
+bool Engine::downloadEnabled()
+{
+    qint64 dt = QDateTime::currentDateTime().toMSecsSinceEpoch();
+    qint64 dtInicio = QDateTime(QDate(2017, 11, 3), QTime(0, 0, 0)).toMSecsSinceEpoch();
+    qint64 dtFin = QDateTime(QDate(2017, 11, 5), QTime(23, 59, 59)).toMSecsSinceEpoch();
+
+    return (dtInicio <= dt) &&  (dt <= dtFin);
+}
 
 int Engine::getIdAuspiciante()
 {
@@ -123,3 +143,4 @@ QString Engine::getBackgroundImage()
     int i = rand() % 12 + 1;
     return resource.arg(i);
 }
+

@@ -58,6 +58,13 @@ public class AnahiActivity extends org.qtproject.qt5.android.bindings.QtActivity
     return "OK";
   }
 
+  public static String download(String url) {
+    Intent i = new Intent(Intent.ACTION_VIEW);
+    i.setData(android.net.Uri.parse(url));
+    m_Instance.startActivity(i);
+    return "OK";
+  }
+
   public static String launchMapNavigation(String location) {
 
     Intent intent = new Intent(Intent.ACTION_VIEW, android.net.Uri.parse(location));

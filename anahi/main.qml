@@ -148,6 +148,8 @@ ApplicationWindow {
                         ComboBox {
                             id: comboMuestra
                             currentIndex: 0
+                            z: map.z + 2
+
 
                             model: [
                                 "Todo",
@@ -218,8 +220,8 @@ ApplicationWindow {
                             { latitude: -38.7152258, longitude: -62.2048903 },
                             { latitude: -38.7118353, longitude: -62.2095144}
                         ]
-                        ToolTip.visible: estacienamientoMA.pressed
-                        ToolTip.text: "Estacionamiento"
+                        /*ToolTip.visible: estacienamientoMA.pressed
+                        ToolTip.text: "Estacionamiento"*/
 
                         Connections {
                             target: comboMuestra
@@ -400,7 +402,7 @@ ApplicationWindow {
     footer: ColumnLayout {
         antialiasing: true
         spacing: 2
-        Image {
+        /*Image {
             id: auspiciante
             source: engine.getImageAuspiciante(0)
             property string url: engine.getURLAuspiciante(0)
@@ -414,7 +416,7 @@ ApplicationWindow {
                     engine.launchURL(auspiciante.url);
                 }
             }
-        }
+        }*/
 
         TabBar {
             id: tabBar
@@ -454,7 +456,7 @@ ApplicationWindow {
         }
     }
 
-    Timer {
+    /*Timer {
         interval: 4000
         running: true
         repeat: true
@@ -463,5 +465,6 @@ ApplicationWindow {
             auspiciante.source = engine.getImageAuspiciante(idAuspiciante);
             auspiciante.url = engine.getURLAuspiciante(idAuspiciante);
         }
-    }
+    }*/
+
 }
