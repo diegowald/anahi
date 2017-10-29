@@ -56,11 +56,11 @@ ApplicationWindow {
         opacity: 0.8
 
         Page1 {
-        //    opacity: 0.8
+            //    opacity: 0.8
         }
 
         Page {
-          //  opacity: 0.8
+            //  opacity: 0.8
             ColumnLayout {
                 ListView {
                     id: listViewClubes
@@ -111,9 +111,6 @@ ApplicationWindow {
             ColumnLayout {
                 anchors.fill: parent
 
-
-
-
                 PositionSource {
                     id: positionSource
                     property variant lastSearchPosition: locationClub
@@ -125,8 +122,8 @@ ApplicationWindow {
                         if (distance < 2000) {
                             map.center = currentPosition
                             lastSearchPosition = currentPosition
-                          //  searchModel.searchArea = QtPositioning.circle(currentPosition)
-                          //  searchModel.update()
+                            //  searchModel.searchArea = QtPositioning.circle(currentPosition)
+                            //  searchModel.update()
                         }
                         else {
                             map.center = locationClub
@@ -152,14 +149,13 @@ ApplicationWindow {
                                 "Estacionamiento",
                                 "Baños",
                                 "3er Tiempo",
-                                "Comprar",
+                                "Compras",
                                 "Escuelita",
                                 "M8-M9",
                                 "M10",
                                 "M11",
                                 "M12",
-                                "M13",
-                                "M14"
+                                "M13"
                             ]
                         }
                     }
@@ -799,29 +795,208 @@ ApplicationWindow {
                         }
                     }
 
-                    MapCircle {
+
+                    MapQuickItem {
                         id: casitaAzul
+                        coordinate: QtPositioning.coordinate(-38.7146021, -62.2074947)
+
+                        anchorPoint.x: lcasitaAzul.width / 2
+                        anchorPoint.y : lcasitaAzul.height / 2
+                        sourceItem: ColumnLayout {
+                            Image {
+                                id: imageCasitaAzul
+                                width: 100
+                                height: 100
+                                source: "qrc:/ui/restaurant.png"
+                            }
+                            Label {
+                            id: lcasitaAzul
+                            text: "Parrilla"
+                            font.pixelSize: 12
+                            color: "black"
+                            font.bold: true
+                            }
+                        }
+
+                        Connections {
+                            target: comboMuestra
+                            onCurrentIndexChanged: {
+                                casitaAzul.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 5));
+                            }
+                        }
                     }
 
-                    MapCircle {
+                    MapQuickItem {
                         id: clubHouse
+                        coordinate: QtPositioning.coordinate(-38.7161215, -62.2065103)
+                        anchorPoint.x: lCanchasM10.width / 2
+                        anchorPoint.y : lCanchasM10.height / 2
+                        sourceItem: ColumnLayout {
+                            Image {
+                                id: imageClubHouse
+                                width: 100
+                                height: 100
+                                source: "qrc:/ui/restaurant.png"
+                            }
+                            Label {
+                                id: lclubHouse
+                                text: "Confitería"
+                                font.pixelSize: 12
+                                color: "black"
+                                font.bold: true
+                            }
+                        }
+
+                        Connections {
+                            target: comboMuestra
+                            onCurrentIndexChanged: {
+                                clubHouse.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 5));
+                            }
+                        }
                     }
 
-                    MapPolygon {
-                        id: banios
+
+                    MapQuickItem {
+                        id: controlCentral
+                        coordinate: QtPositioning.coordinate(-38.7152258, -62.2067356)
+                        anchorPoint.x: lcontrolCentral.width / 2
+                        anchorPoint.y : lcontrolCentral.height / 2
+                        sourceItem: ColumnLayout {
+                            Image {
+                                id: imageControlCentral
+                                width: 100
+                                height: 100
+                                source: "qrc:/ui/controlCentral.png"
+                            }
+                            Label {
+                            id: lcontrolCentral
+                            text: "Control Central"
+                            font.pixelSize: 12
+                            color: "black"
+                            font.bold: true
+                            }
+                        }
+
+                        Connections {
+                            target: comboMuestra
+                            onCurrentIndexChanged: {
+                                controlCentral.visible = (comboMuestra.currentIndex == 0)
+                            }
+                        }
                     }
 
-                    MapPolygon {
-                        id: sector3erTiempo
+                    MapQuickItem {
+                        id: banios1
+                        coordinate: QtPositioning.coordinate(-38.7145477, -62.2087258)
+                        anchorPoint.x: lbanios.width / 2
+                        anchorPoint.y : lbanios.height / 2
+                        sourceItem: Label {
+                            id: lbanios
+                            text: "Baños"
+                            font.pixelSize: 12
+                            color: "black"
+                            font.bold: true
+                        }
+
+                        Connections {
+                            target: comboMuestra
+                            onCurrentIndexChanged: {
+                                controlCentral.visible = (comboMuestra.currentIndex == 0)
+                            }
+                        }
                     }
 
+                    MapQuickItem {
+                        id: banios2
+                        coordinate: QtPositioning.coordinate(-38.7154602, -62.2056198)
+                        anchorPoint.x: lbanios2.width / 2
+                        anchorPoint.y : lbanios2.height / 2
+                        sourceItem: Label {
+                            id: lbanios2
+                            text: "Baños y Vestuario"
+                            font.pixelSize: 12
+                            color: "black"
+                            font.bold: true
+                        }
+
+                        Connections {
+                            target: comboMuestra
+                            onCurrentIndexChanged: {
+                                controlCentral.visible = (comboMuestra.currentIndex == 0)
+                            }
+                        }
+                    }
+
+                    MapQuickItem {
+                        id: banios3
+                        coordinate: QtPositioning.coordinate(-38.7162722, -62.2076798)
+                        anchorPoint.x: lbanios3.width / 2
+                        anchorPoint.y : lbanios3.height / 2
+                        sourceItem: Label {
+                            id: lbanios3
+                            text: "Baños"
+                            font.pixelSize: 12
+                            color: "black"
+                            font.bold: true
+                        }
+
+                        Connections {
+                            target: comboMuestra
+                            onCurrentIndexChanged: {
+                                controlCentral.visible = (comboMuestra.currentIndex == 0)
+                            }
+                        }
+                    }
+
+                    MapQuickItem {
+                        id: sector3erTiempoJugadores
+                        coordinate: QtPositioning.coordinate(-38.715615, -62.2057968)
+                        anchorPoint.x: lSector3erTiempoJugadores.width / 2
+                        anchorPoint.y : lSector3erTiempoJugadores.height / 2
+                        sourceItem: Label {
+                            id: lSector3erTiempoJugadores
+                            text: "3er Tiempo Jugadores"
+                            font.pixelSize: 12
+                            color: "black"
+                            font.bold: true
+                        }
+
+                        Connections {
+                            target: comboMuestra
+                            onCurrentIndexChanged: {
+                                controlCentral.visible = (comboMuestra.currentIndex == 0)
+                            }
+                        }
+                    }
+
+                    MapQuickItem {
+                        id: sector3erTiempoEntrenadores
+                        coordinate: QtPositioning.coordinate(-38.7158076, -62.2061294)
+                        anchorPoint.x: lSector3erTiempoEntrenadores.width / 2
+                        anchorPoint.y : lSector3erTiempoEntrenadores.height / 2
+
+                        sourceItem: Label {
+                            id: lSector3erTiempoEntrenadores
+                            text: "3er Tiempo Entrenadores"
+                            font.pixelSize: 12
+                            color: "black"
+                            font.bold: true
+                        }
+
+                        Connections {
+                            target: comboMuestra
+                            onCurrentIndexChanged: {
+                                controlCentral.visible = (comboMuestra.currentIndex == 0)
+                            }
+                        }
+                    }
 
                     layer.enabled: true
                     layer.smooth: true
                     property int w: mapOverlay.width
                     property int h: mapOverlay.height
                     //property int pr: Screen.devicePixelRatio
-                      layer.textureSize: Qt.size(w  * 2 /** pr*/, h * 2 /** pr*/)
+                    layer.textureSize: Qt.size(w  * 2 /** pr*/, h * 2 /** pr*/)
                 }
             }
         }

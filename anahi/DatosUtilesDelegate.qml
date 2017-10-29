@@ -15,12 +15,13 @@ ItemDelegate {
         id: dlg
         visible: false
         contentItem: Rectangle {
-            height: 400
+            height: 500
             color: "lightskyblue"
             implicitWidth: 400
-            implicitHeight: 400
+            implicitHeight: txt.height
             ColumnLayout {
                 Text {
+                    id: txt
                     width: 380
                     color: "navy"
                     text: "Copyright (C) 2017  Diego Ignacio Wald
