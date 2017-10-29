@@ -11,6 +11,40 @@ ItemDelegate {
     //property bool checkable: true
     checkable: true
 
+    Dialog {
+        id: dlg
+        visible: false
+        contentItem: Rectangle {
+            height: 400
+            color: "lightskyblue"
+            implicitWidth: 400
+            implicitHeight: 400
+            ColumnLayout {
+                Text {
+                    width: 380
+                    color: "navy"
+                    text: "Copyright (C) 2017  Diego Ignacio Wald
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see http://www.gnu.org/licenses/"
+                    textFormat: Text.AutoText
+                    font.pointSize: 9
+                    elide: Text.ElideMiddle
+                    Layout.fillWidth: false
+                }
+            }
+        }
+    }
 
     function buttonLabel() {
         switch (tipo)
@@ -23,6 +57,8 @@ ItemDelegate {
             return "WhatsApp";
         case DatosUtilesModel.Web:
             return "Web";
+        case DatosUtilesModel.About:
+            return "Info";
         }
         return "";
     }
@@ -96,6 +132,9 @@ ItemDelegate {
                         break;
                     case DatosUtilesModel.Web:
                         engine.launchURL(number);
+                        break;
+                    case DatosUtilesModel.About:
+                        dlg.visible = true;
                         break;
                     }
                 }

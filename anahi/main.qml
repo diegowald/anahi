@@ -12,10 +12,6 @@ ApplicationWindow {
     height: 480
     title: qsTr("Anahi")
 
-    /*    header: Label {
-        id: timerLabel
-    }*/
-
     property variant locationClub: QtPositioning.coordinate( -38.715921, -62.208452 )
 
 
@@ -207,11 +203,6 @@ ApplicationWindow {
                     MapPolygon {
                         id: estacionamiento
                         color: "gray"
-                        /*MouseArea {
-                            id: estacienamientoMA
-                            anchors.fill: parent
-                        }*/
-
                         opacity: 0.5
 
                         path: [
@@ -220,8 +211,6 @@ ApplicationWindow {
                             { latitude: -38.7152258, longitude: -62.2048903 },
                             { latitude: -38.7118353, longitude: -62.2095144}
                         ]
-                        /*ToolTip.visible: estacienamientoMA.pressed
-                        ToolTip.text: "Estacionamiento"*/
 
                         Connections {
                             target: comboMuestra
@@ -234,8 +223,6 @@ ApplicationWindow {
                     MapQuickItem {
                         id: lblEstacionamiento
                         coordinate: QtPositioning.coordinate(-38.71312245, -62.2067276 )
-/*                        anchorPoint.x: estacionamiento.Center.x
-                        anchorPoint.y: estacionamiento.Center.y*/
                         anchorPoint.x: l1.width / 2
                         anchorPoint.y : l1.height / 2
 
@@ -267,8 +254,6 @@ ApplicationWindow {
                             { latitude: -38.7145592, longitude: -62.2083718 },
                             { latitude: -38.7148438, longitude: -62.2080177 }
                         ]
-                        /*ToolTip.visible: estacienamientoMA.pressed
-                        ToolTip.text: "Estacionamiento"*/
 
                         Connections {
                             target: comboMuestra
@@ -281,8 +266,6 @@ ApplicationWindow {
                     MapQuickItem {
                         id: lblCanchasEscuelitaM8
                         coordinate: QtPositioning.coordinate(-38.7147928, -62.208318125)
-/*                        anchorPoint.x: estacionamiento.Center.x
-                        anchorPoint.y: estacionamiento.Center.y*/
                         anchorPoint.x: lCanchasEscuelitaM8.width / 2
                         anchorPoint.y : lCanchasEscuelitaM8.height / 2
                         sourceItem: Label {
@@ -313,8 +296,6 @@ ApplicationWindow {
                             { latitude: -38.7150667, longitude: -62.2075295 },
                             { latitude: -38.7148093, longitude: -62.2078407 }
                         ]
-                        /*ToolTip.visible: estacienamientoMA.pressed
-                        ToolTip.text: "Estacionamiento"*/
 
                         Connections {
                             target: comboMuestra
@@ -327,8 +308,6 @@ ApplicationWindow {
                     MapQuickItem {
                         id: lblCanchasM9
                         coordinate: QtPositioning.coordinate(-38.7148501, -62.207574475)
-/*                        anchorPoint.x: estacionamiento.Center.x
-                        anchorPoint.y: estacionamiento.Center.y*/
                         anchorPoint.x: lblM9.width / 2
                         anchorPoint.y : lblM9.height / 2
                         sourceItem: Label {
@@ -360,8 +339,6 @@ ApplicationWindow {
                             { latitude: -38.7151389, longitude: -62.2070078 },
                             { latitude: -38.7153252, longitude: -62.2072385 }
                         ]
-                        /*ToolTip.visible: estacienamientoMA.pressed
-                        ToolTip.text: "Estacionamiento"*/
 
                         Connections {
                             target: comboMuestra
@@ -374,8 +351,6 @@ ApplicationWindow {
                     MapQuickItem {
                         id: lblCanchasM9_2
                         coordinate: QtPositioning.coordinate(-38.7151106, -62.207276625)
-/*                        anchorPoint.x: estacionamiento.Center.x
-                        anchorPoint.y: estacionamiento.Center.y*/
                         anchorPoint.x: lblM9_2.width / 2
                         anchorPoint.y : lblM9_2.height / 2
                         sourceItem: Label {
@@ -406,8 +381,6 @@ ApplicationWindow {
                             { latitude: -38.7151316, longitude: -62.2069985 },
                             { latitude: -38.7153419, longitude: -62.2067437 }
                         ]
-                        /*ToolTip.visible: estacienamientoMA.pressed
-                        ToolTip.text: "Estacionamiento"*/
 
                         Connections {
                             target: comboMuestra
@@ -420,8 +393,6 @@ ApplicationWindow {
                     MapQuickItem {
                         id: lblCanchasM10
                         coordinate: QtPositioning.coordinate(-38.71534035, -62.20700855)
-/*                        anchorPoint.x: estacionamiento.Center.x
-                        anchorPoint.y: estacionamiento.Center.y*/
                         anchorPoint.x: lCanchasM10.width / 2
                         anchorPoint.y : lCanchasM10.height / 2
                         sourceItem: Label {
@@ -458,8 +429,6 @@ ApplicationWindow {
                             { latitude: -38.7155732, longitude: -62.2070655 },
                             { latitude: -38.7157741, longitude: -62.2073418 }
                         ]
-                        /*ToolTip.visible: estacienamientoMA.pressed
-                        ToolTip.text: "Estacionamiento"*/
 
                         Connections {
                             target: comboMuestra
@@ -472,8 +441,6 @@ ApplicationWindow {
                     MapQuickItem {
                         id: lblCanchasM10_2
                         coordinate: QtPositioning.coordinate(-38.715517225, -62.207394775)
-/*                        anchorPoint.x: estacionamiento.Center.x
-                        anchorPoint.y: estacionamiento.Center.y*/
                         anchorPoint.x: lCanchasM10_2.width / 2
                         anchorPoint.y : lCanchasM10_2.height / 2
                         sourceItem: Label {
@@ -504,8 +471,6 @@ ApplicationWindow {
                             { latitude: -38.7166426, longitude: -62.2081625 },
                             { latitude: -38.7163454, longitude: -62.2078139 }
                         ]
-                        /*ToolTip.visible: estacienamientoMA.pressed
-                        ToolTip.text: "Estacionamiento"*/
 
                         Connections {
                             target: comboMuestra
@@ -518,8 +483,6 @@ ApplicationWindow {
                     MapQuickItem {
                         id: lblCanchasM10_3
                         coordinate: QtPositioning.coordinate(-38.716602575, -62.20784855)
-/*                        anchorPoint.x: estacionamiento.Center.x
-                        anchorPoint.y: estacionamiento.Center.y*/
                         anchorPoint.x: lCanchasM10_3.width / 2
                         anchorPoint.y : lCanchasM10_3.height / 2
                         sourceItem: Label {
@@ -551,8 +514,6 @@ ApplicationWindow {
                             { latitude: -38.7166426, longitude: -62.2081625 },
                             { latitude: -38.7163454, longitude: -62.2078139 }
                         ]
-                        /*ToolTip.visible: estacienamientoMA.pressed
-                        ToolTip.text: "Estacionamiento"*/
 
                         Connections {
                             target: comboMuestra
@@ -567,8 +528,6 @@ ApplicationWindow {
                     MapQuickItem {
                         id: lblCanchasM11_1
                         coordinate: QtPositioning.coordinate(-38.716396175, -62.20811965)
-/*                        anchorPoint.x: estacionamiento.Center.x
-                        anchorPoint.y: estacionamiento.Center.y*/
                         anchorPoint.x: lCanchasM11_1.width / 2
                         anchorPoint.y : lCanchasM11_1.height / 2
                         sourceItem: Label {
@@ -599,8 +558,6 @@ ApplicationWindow {
                             { latitude: -38.7167431, longitude: -62.2088143 },
                             { latitude: -38.7164417, longitude: -62.2084308 }
                         ]
-                        /*ToolTip.visible: estacienamientoMA.pressed
-                        ToolTip.text: "Estacionamiento"*/
 
                         Connections {
                             target: comboMuestra
@@ -613,8 +570,6 @@ ApplicationWindow {
                     MapQuickItem {
                         id: lblCanchasM11_2
                         coordinate: QtPositioning.coordinate(-38.716695975, -62.20848575)
-/*                        anchorPoint.x: estacionamiento.Center.x
-                        anchorPoint.y: estacionamiento.Center.y*/
                         anchorPoint.x: lCanchasM11_2.width / 2
                         anchorPoint.y : lCanchasM11_2.height / 2
                         sourceItem: Label {
@@ -645,8 +600,6 @@ ApplicationWindow {
                             { latitude: -38.7171616, longitude: -62.2082645 },
                             { latitude: -38.7169565, longitude: -62.2085354 }
                         ]
-                        /*ToolTip.visible: estacienamientoMA.pressed
-                        ToolTip.text: "Estacionamiento"*/
 
                         Connections {
                             target: comboMuestra
@@ -659,8 +612,6 @@ ApplicationWindow {
                     MapQuickItem {
                         id: lblCanchasM11_3
                         coordinate: QtPositioning.coordinate(-38.7169042, -62.2082135)
-/*                        anchorPoint.x: estacionamiento.Center.x
-                        anchorPoint.y: estacionamiento.Center.y*/
                         anchorPoint.x: lCanchasM11_3.width / 2
                         anchorPoint.y : lCanchasM11_3.height / 2
                         sourceItem: Label {
@@ -691,8 +642,6 @@ ApplicationWindow {
                             { latitude: -38.7152258, longitude: -62.2066015 },
                             { latitude: -38.7145247, longitude: -62.2074518 }
                         ]
-                        /*ToolTip.visible: estacienamientoMA.pressed
-                        ToolTip.text: "Estacionamiento"*/
 
                         Connections {
                             target: comboMuestra
@@ -705,8 +654,6 @@ ApplicationWindow {
                     MapQuickItem {
                         id: lblCanchasM12
                         coordinate: QtPositioning.coordinate(-38.714649725, -62.206722225)
-/*                        anchorPoint.x: estacionamiento.Center.x
-                        anchorPoint.y: estacionamiento.Center.y*/
                         anchorPoint.x: lCanchasM12.width / 2
                         anchorPoint.y : lCanchasM12.height / 2
                         sourceItem: Label {
@@ -738,8 +685,6 @@ ApplicationWindow {
                             { latitude: -38.7160859, longitude: -62.2067919 }
 
                         ]
-                        /*ToolTip.visible: estacienamientoMA.pressed
-                        ToolTip.text: "Estacionamiento"*/
 
                         Connections {
                             target: comboMuestra
@@ -752,8 +697,6 @@ ApplicationWindow {
                     MapQuickItem {
                         id: lblCanchasM12_2
                         coordinate: QtPositioning.coordinate(-38.715806525, -62.2068449)
-/*                        anchorPoint.x: estacionamiento.Center.x
-                        anchorPoint.y: estacionamiento.Center.y*/
                         anchorPoint.x: lCanchasM12_2.width / 2
                         anchorPoint.y : lCanchasM12_2.height / 2
                         sourceItem: Label {
@@ -784,8 +727,6 @@ ApplicationWindow {
                             { latitude: -38.714058, longitude: -62.2069717 },
                             { latitude: -38.7148574, longitude: -62.2080016 }
                         ]
-                        /*ToolTip.visible: estacienamientoMA.pressed
-                        ToolTip.text: "Estacionamiento"*/
 
                         Connections {
                             target: comboMuestra
@@ -798,8 +739,6 @@ ApplicationWindow {
                     MapQuickItem {
                         id: lblCanchasM13
                         coordinate: QtPositioning.coordinate(-38.7142144, -62.207795775)
-/*                        anchorPoint.x: estacionamiento.Center.x
-                        anchorPoint.y: estacionamiento.Center.y*/
                         anchorPoint.x: lCanchasM13.width / 2
                         anchorPoint.y : lCanchasM13.height / 2
                         sourceItem: Label {
@@ -830,8 +769,6 @@ ApplicationWindow {
                             { latitude: -38.71514, longitude: -62.2074303 },
                             { latitude: -38.7154058, longitude: -62.2077978 }
                         ]
-                        /*ToolTip.visible: estacienamientoMA.pressed
-                        ToolTip.text: "Estacionamiento"*/
 
                         Connections {
                             target: comboMuestra
@@ -844,8 +781,6 @@ ApplicationWindow {
                     MapQuickItem {
                         id: lblCanchasM13_2
                         coordinate: QtPositioning.coordinate(-38.715104925, -62.20781655)
-/*                        anchorPoint.x: estacionamiento.Center.x
-                        anchorPoint.y: estacionamiento.Center.y*/
                         anchorPoint.x: lCanchasM13_2.width / 2
                         anchorPoint.y : lCanchasM13_2.height / 2
                         sourceItem: Label {
@@ -863,29 +798,6 @@ ApplicationWindow {
                             }
                         }
                     }
-
-/*                    MapPolygon {
-                        id: canchaM14
-                        color: "lightgreen"
-
-                        opacity: 0.5
-
-                        path: [
-                            { latitude: -38.7125636, longitude: -62.2089028},
-                            { latitude: -38.7129697, longitude: -62.2093964 },
-                            { latitude: -38.7123795, longitude: -62.2101796 },
-                            { latitude: -38.711986, longitude: -62.2096753 }
-                        ]
-                        /*ToolTip.visible: estacienamientoMA.pressed
-                        ToolTip.text: "Estacionamiento"*-/
-
-                        Connections {
-                            target: comboMuestra
-                            onCurrentIndexChanged: {
-                                estacionamiento.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 1));
-                            }
-                        }
-                    }*/
 
                     MapCircle {
                         id: casitaAzul
@@ -915,9 +827,7 @@ ApplicationWindow {
         }
 
         Page {
-        //    opacity: 0.8
             ColumnLayout {
-                //anchors.fill: parent
                 ListView {
                     id: listView
                     width: 360
@@ -963,15 +873,6 @@ ApplicationWindow {
 
     }
 
-    /*background: Image {
-        id: imageBackground
-        anchors.fill: parent
-        antialiasing: true
-        transformOrigin: Item.TopLeft
-        fillMode: Image.PreserveAspectFit
-        source: engine.getBackgroundImage()
-    }
-    */
 
     background: Item {
         id: backgroundItem
@@ -1030,21 +931,6 @@ ApplicationWindow {
     footer: ColumnLayout {
         antialiasing: true
         spacing: 2
-        /*Image {
-            id: auspiciante
-            source: engine.getImageAuspiciante(0)
-            property string url: engine.getURLAuspiciante(0)
-            Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
-            height: 150
-            MouseArea {
-                anchors.fill: auspiciante
-                onClicked: {
-                    console.info("click");
-                    console.info(auspiciante.url);
-                    engine.launchURL(auspiciante.url);
-                }
-            }
-        }*/
 
         TabBar {
             id: tabBar
@@ -1078,21 +964,9 @@ ApplicationWindow {
         running: true
         repeat: true
         onTriggered: {
-            //imageBackground.source = engine.getBackgroundImage();
             backgroundItem.toggle();
             console.info("toggle");
         }
     }
-
-    /*Timer {
-        interval: 4000
-        running: true
-        repeat: true
-        onTriggered: {
-            var idAuspiciante = engine.getIdAuspiciante();
-            auspiciante.source = engine.getImageAuspiciante(idAuspiciante);
-            auspiciante.url = engine.getURLAuspiciante(idAuspiciante);
-        }
-    }*/
 
 }

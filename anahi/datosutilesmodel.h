@@ -25,7 +25,8 @@ public:
         Map,
         Telephone,
         WhatsApp,
-        Web
+        Web,
+        About
     };
     Q_ENUM(DatoUtilType)
 

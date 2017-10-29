@@ -43,6 +43,7 @@ DatosUtilesModel::DatosUtilesModel(QObject *parent ) : QAbstractListModel(parent
 
     m_datoUtil.append( { "Marcelo Spikerman", "", "Bahia Blanca" , "+549291416479", "Entrenador M14", DatoUtilType::WhatsApp, QDateTime(QDate(2017, 10, 27), QTime(0, 0, 0)), QDateTime(QDate(2017, 11, 7), QTime(23, 59, 59)) });
 
+    m_datoUtil.append( { "Acerca de la aplicación", "", "", "", "Créditos", DatoUtilType::About, QDateTime(QDate(2017, 10, 27), QTime(0, 0, 0)), QDateTime(QDate(2017, 12, 31), QTime(23, 59, 59)) });
 }
 
 int DatosUtilesModel::rowCount(const QModelIndex &) const
