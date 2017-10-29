@@ -31,6 +31,8 @@ public:
     Q_INVOKABLE static void download(const QString &url);
     Q_INVOKABLE static bool downloadEnabled();
 
+    Q_INVOKABLE static bool isCurrentDateInRange(const QDateTime &from, const QDateTime &to);
+
 
 private:
     static QMap<int, QPair<QString, QString>> _auspiciantes;

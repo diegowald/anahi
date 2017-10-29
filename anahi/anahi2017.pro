@@ -48,8 +48,7 @@ DISTFILES += \
     android/res/values/libs.xml \
     android/build.gradle \
     android/gradle/wrapper/gradle-wrapper.properties \
-    android/gradlew.bat \
-    ClubesDelegate.qml
+    android/gradlew.bat
 
 OTHER_FILES += \
     android/src/anahi/AnahiActivity.java \

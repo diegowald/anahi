@@ -4,7 +4,7 @@ ClubesModel::ClubesModel(QObject *parent) : QAbstractListModel(parent)
 {
     m_club.append({ "Club Argentino", "", "Bahia Blanca", "qrc:///clubes/clubArgentino.png", "Rugby", ClubType::Web });
     m_club.append({ "Sociedad Sportiva", "", "Bahia Blanca", "qrc:///clubes/clubSportiva.jpg", "Rugby", ClubType::Web });
-    m_club.append({ "Palihue Rugby y Hockeu", "", "Bahia Blanca", "qrc:///clubes/ClubPalihue.jpg", "Rugby", ClubType::Web });
+    m_club.append({ "Palihue Rugby y Hockey", "", "Bahia Blanca", "qrc:///clubes/ClubPalihue.jpg", "Rugby", ClubType::Web });
     m_club.append({ "Club Universitario", "", "Bahia Blanca", "qrc:///clubes/clubUniversitario.jpg", "Rugby", ClubType::Web });
     m_club.append({ "El Nacional", "", "Bahia Blanca", "qrc:///clubes/clubElNacional.jpg", "Rugby", ClubType::Web });
     m_club.append({ "Puerto Belgrano", "", "Puerto Belgrano", "qrc:///clubes/clubPuertoBelgrano.jpg", "Rugby", ClubType::Web });
@@ -16,10 +16,10 @@ ClubesModel::ClubesModel(QObject *parent) : QAbstractListModel(parent)
     m_club.append({ "Halcones", "", "Darregueira", "qrc:///clubes/halcones.jpg", "Rugby", ClubType::Web });
     m_club.append({ "Camarones", "", "Pinamar", "qrc:///clubes/ClubCamarones.jpg", "Rugby", ClubType::Web });
     m_club.append({ "Los 50", "", "Tandil" , "qrc:///clubes/ClubLos50.jpg", "Rugby", ClubType::Web });
-    m_club.append({ "Draig Goch", "", "Gaiman", "qrc:///clubes/clubPuertoBelgrano.jpg", "Rugby", ClubType::Web });
+    m_club.append({ "Draig Goch", "", "Gaiman", "qrc:///clubes/clubDraigGroch.jpg", "Rugby", ClubType::Web });
     m_club.append({ "Bigornia", "", "Rawson", "qrc:///clubes/clubBigornia.png", "Rugby", ClubType::Web });
     m_club.append({ "Centro Naval", "", "Buenos Aires", "qrc:///clubes/ClubCentroNaval.jpg", "Rugby", ClubType::Web });
-    m_club.append({ "Nautico", "", "Necochea", "qrc:///clubes/ClubNecochea.jpg", "Rugby", ClubType::Web });
+    m_club.append({ "Club Náutico Necochea", "", "Necochea", "qrc:///clubes/ClubNecochea.jpg", "Rugby", ClubType::Web });
     m_club.append({ "Independiente", "", "Puan", "qrc:///clubes/clubIndependientePuan.jpg", "Rugby", ClubType::Web });
 }
 

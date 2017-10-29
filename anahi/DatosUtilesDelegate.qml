@@ -26,6 +26,22 @@ ItemDelegate {
         }
         return "";
     }
+
+    function direccionVisible() {
+        switch (tipo)
+        {
+        case DatosUtilesModel.Map:
+            return true;
+        }
+        return false;
+    }
+
+    function buttonVisble() {
+        if (engine.isCurrentDateInRange(visibleDesde, visibleHasta))
+            return true;
+        else
+            return false;
+    }
     
     contentItem: ColumnLayout {
         spacing: 10
@@ -42,12 +58,14 @@ ItemDelegate {
             visible: false
 
             columns: 3
-            rowSpacing: 10
-            columnSpacing: 10
+            rowSpacing: 2
+            columnSpacing: 2
 
             Label {
-                text: "Direccion:"
-                Layout.leftMargin: 60
+                x: 2
+                text: "Dirección:"
+                Layout.leftMargin: 5
+                visible: direccionVisible()
             }
 
             Label {
@@ -55,6 +73,7 @@ ItemDelegate {
                 font.bold: true
                 elide: Text.ElideRight
                 Layout.fillWidth: true
+                visible: direccionVisible()
             }
 
 
@@ -62,6 +81,7 @@ ItemDelegate {
                 Layout.rowSpan: 3
                 id: buttonAction
                 label: buttonLabel()
+                visibilidad: buttonVisble()
                 onClicked: {
                     switch (tipo)
                     {
@@ -82,8 +102,10 @@ ItemDelegate {
             }
 
             Label {
+                x: 2
                 text: "Ciudad:"
-                Layout.leftMargin: 60
+                Layout.leftMargin: 5
+                visible: direccionVisible()
             }
 
             Label {
@@ -91,9 +113,10 @@ ItemDelegate {
                 font.bold: true
                 elide: Text.ElideRight
                 Layout.fillWidth: true
+                visible: direccionVisible()
             }
 
-            Label {
+            /*Label {
                 text: "Telefono:"
                 Layout.leftMargin: 60
             }
@@ -103,7 +126,7 @@ ItemDelegate {
                 font.bold: true
                 elide: Text.ElideRight
                 Layout.fillWidth: true
-            }
+            }*/
         }
 
 

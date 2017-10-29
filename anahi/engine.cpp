@@ -105,9 +105,14 @@ void Engine::download(const QString &url)
 
 bool Engine::downloadEnabled()
 {
+    return isCurrentDateInRange(QDateTime(QDate(2017, 11, 3), QTime(0, 0, 0)), QDateTime(QDate(2017, 11, 5), QTime(23, 59, 59)));
+}
+
+bool Engine::isCurrentDateInRange(const QDateTime &from, const QDateTime &to)
+{
     qint64 dt = QDateTime::currentDateTime().toMSecsSinceEpoch();
-    qint64 dtInicio = QDateTime(QDate(2017, 11, 3), QTime(0, 0, 0)).toMSecsSinceEpoch();
-    qint64 dtFin = QDateTime(QDate(2017, 11, 5), QTime(23, 59, 59)).toMSecsSinceEpoch();
+    qint64 dtInicio = from.toMSecsSinceEpoch();
+    qint64 dtFin = to.toMSecsSinceEpoch();
 
     return (dtInicio <= dt) &&  (dt <= dtFin);
 }

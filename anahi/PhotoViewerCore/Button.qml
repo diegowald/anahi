@@ -57,6 +57,10 @@ Item {
     property color tint: "transparent"
     signal clicked
 
+    property bool visibilidad: true
+
+    visible: visibilidad
+
     width: labelText.width + 70 ; height: labelText.height + 30
 
     /*BorderImage {
@@ -69,6 +73,7 @@ Item {
     Image {
         anchors { fill: container; leftMargin: -6; topMargin: -6; rightMargin: -8; bottomMargin: -8 }
         source: "qrc:///ui/pelotaRugby.png"; antialiasing: true; fillMode: Image.PreserveAspectFit
+        visible: visibilidad
     }
 
     Rectangle {
@@ -76,10 +81,11 @@ Item {
         opacity: 0.25
     }
 
-    Text { id: labelText; font.pixelSize: 15; anchors.centerIn: parent }
+    Text { id: labelText; font.pixelSize: 15; anchors.centerIn: parent; visible: visibilidad }
 
     MouseArea {
         anchors { fill: parent; leftMargin: -20; topMargin: -20; rightMargin: -20; bottomMargin: -20 }
         onClicked: container.clicked()
+        visible: visibilidad
     }
 }

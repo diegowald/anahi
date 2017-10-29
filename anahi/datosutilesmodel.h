@@ -2,6 +2,7 @@
 #define DATOSUTILESMODEL_H
 
 #include <QAbstractListModel>
+#include <QDateTime>
 
 class DatosUtilesModel : public QAbstractListModel
 {
@@ -14,7 +15,9 @@ public:
         CityRole,
         NumberRole,
         CategoriaRole,
-        TypeRole
+        TypeRole,
+        visibleDesdeRole,
+        visibleHastaRole
     };
     Q_ENUM(DatoUtilRole)
 
@@ -35,8 +38,8 @@ public:
     QHash<int, QByteArray> roleNames() const;
 
     Q_INVOKABLE QVariantMap get(int row) const;
-    Q_INVOKABLE void append(const QString &fullName, const QString &address, const QString  &city, const QString &number);
-    Q_INVOKABLE void set(int row, const QString &fullName, const QString &address, const QString  &city, const QString &number);
+    Q_INVOKABLE void append(const QString &fullName, const QString &address, const QString  &city, const QString &number, const QString &categoria, const DatoUtilType tipo, const QDateTime &visibleDesde, const QDateTime &visibleHasta );
+    Q_INVOKABLE void set(int row, const QString &fullName, const QString &address, const QString  &city, const QString &number, const QString &categoria, const DatoUtilType tipo, const QDateTime &visibleDesde, const QDateTime &visibleHasta );
     Q_INVOKABLE void remove(int row);
 
 private:
@@ -47,6 +50,8 @@ private:
         QString number;
         QString categoria;
         DatoUtilType tipo;
+        QDateTime visibleDesde;
+        QDateTime visibleHasta;
     };
 
     QList<DatoUtil> m_datoUtil;

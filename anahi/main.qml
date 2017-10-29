@@ -157,13 +157,13 @@ ApplicationWindow {
                                 "Baños",
                                 "3er Tiempo",
                                 "Comprar",
-                                "Canchas Escuelita",
-                                "Canchas M8-M9",
-                                "Canchas M10",
-                                "Canchas M11",
-                                "Canchas M12",
-                                "Canchas M13",
-                                "Canchas M14"
+                                "Escuelita",
+                                "M8-M9",
+                                "M10",
+                                "M11",
+                                "M12",
+                                "M13",
+                                "M14"
                             ]
                         }
                     }
@@ -207,10 +207,10 @@ ApplicationWindow {
                     MapPolygon {
                         id: estacionamiento
                         color: "gray"
-                        MouseArea {
+                        /*MouseArea {
                             id: estacienamientoMA
                             anchors.fill: parent
-                        }
+                        }*/
 
                         opacity: 0.5
 
@@ -231,33 +231,661 @@ ApplicationWindow {
                         }
                     }
 
+                    MapQuickItem {
+                        id: lblEstacionamiento
+                        coordinate: QtPositioning.coordinate(-38.71312245, -62.2067276 )
+/*                        anchorPoint.x: estacionamiento.Center.x
+                        anchorPoint.y: estacionamiento.Center.y*/
+                        anchorPoint.x: l1.width / 2
+                        anchorPoint.y : l1.height / 2
+
+                        sourceItem: Label {
+                            id:l1
+                            text: "Estacionamiento"
+                            font.pixelSize: 12
+                            color: "black"
+                            font.bold: true
+                        }
+
+                        Connections {
+                            target: comboMuestra
+                            onCurrentIndexChanged: {
+                                lblEstacionamiento.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 1));
+                            }
+                        }
+                    }
+
                     MapPolygon {
-                        id: canchasEscuelita
+                        id: canchasEscuelitaM8
+                        color: "lightgreen"
+
+                        opacity: 0.5
+
+                        path: [
+                            { latitude: -38.7150259, longitude: -62.2082591 },
+                            { latitude: -38.7147423, longitude: -62.2086239 },
+                            { latitude: -38.7145592, longitude: -62.2083718 },
+                            { latitude: -38.7148438, longitude: -62.2080177 }
+                        ]
+                        /*ToolTip.visible: estacienamientoMA.pressed
+                        ToolTip.text: "Estacionamiento"*/
+
+                        Connections {
+                            target: comboMuestra
+                            onCurrentIndexChanged: {
+                                canchasEscuelitaM8.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 5));
+                            }
+                        }
+                    }
+
+                    MapQuickItem {
+                        id: lblCanchasEscuelitaM8
+                        coordinate: QtPositioning.coordinate(-38.7147928, -62.208318125)
+/*                        anchorPoint.x: estacionamiento.Center.x
+                        anchorPoint.y: estacionamiento.Center.y*/
+                        anchorPoint.x: lCanchasEscuelitaM8.width / 2
+                        anchorPoint.y : lCanchasEscuelitaM8.height / 2
+                        sourceItem: Label {
+                            id: lCanchasEscuelitaM8
+                            text: "Cancha Escuelita y M8"
+                            font.pixelSize: 12
+                            color: "black"
+                            font.bold: true
+                        }
+
+                        Connections {
+                            target: comboMuestra
+                            onCurrentIndexChanged: {
+                                lblCanchasEscuelitaM8.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 5));
+                            }
+                        }
+                    }
+
+                    MapPolygon {
+                        id: canchasM9
+                        color: "lightgreen"
+
+                        opacity: 0.5
+
+                        path: [
+                            { latitude: -38.7146377, longitude: -62.2076154 },
+                            { latitude: -38.7148867, longitude: -62.2073123 },
+                            { latitude: -38.7150667, longitude: -62.2075295 },
+                            { latitude: -38.7148093, longitude: -62.2078407 }
+                        ]
+                        /*ToolTip.visible: estacienamientoMA.pressed
+                        ToolTip.text: "Estacionamiento"*/
+
+                        Connections {
+                            target: comboMuestra
+                            onCurrentIndexChanged: {
+                                canchasM9.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 6));
+                            }
+                        }
+                    }
+
+                    MapQuickItem {
+                        id: lblCanchasM9
+                        coordinate: QtPositioning.coordinate(-38.7148501, -62.207574475)
+/*                        anchorPoint.x: estacionamiento.Center.x
+                        anchorPoint.y: estacionamiento.Center.y*/
+                        anchorPoint.x: lblM9.width / 2
+                        anchorPoint.y : lblM9.height / 2
+                        sourceItem: Label {
+                            id: lblM9
+                            text: "Cancha M9"
+                            font.pixelSize: 12
+                            color: "black"
+                            font.bold: true
+                        }
+
+                        Connections {
+                            target: comboMuestra
+                            onCurrentIndexChanged: {
+                                lblCanchasM9.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 6));
+                            }
+                        }
+                    }
+
+
+                    MapPolygon {
+                        id: canchasM9_2
+                        color: "lightgreen"
+
+                        opacity: 0.5
+
+                        path: [
+                            { latitude: -38.7150908, longitude: -62.207547 },
+                            { latitude: -38.7148875, longitude: -62.2073132 },
+                            { latitude: -38.7151389, longitude: -62.2070078 },
+                            { latitude: -38.7153252, longitude: -62.2072385 }
+                        ]
+                        /*ToolTip.visible: estacienamientoMA.pressed
+                        ToolTip.text: "Estacionamiento"*/
+
+                        Connections {
+                            target: comboMuestra
+                            onCurrentIndexChanged: {
+                                canchasM9_2.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 6));
+                            }
+                        }
+                    }
+
+                    MapQuickItem {
+                        id: lblCanchasM9_2
+                        coordinate: QtPositioning.coordinate(-38.7151106, -62.207276625)
+/*                        anchorPoint.x: estacionamiento.Center.x
+                        anchorPoint.y: estacionamiento.Center.y*/
+                        anchorPoint.x: lblM9_2.width / 2
+                        anchorPoint.y : lblM9_2.height / 2
+                        sourceItem: Label {
+                            id: lblM9_2
+                            text: "Cancha M9"
+                            font.pixelSize: 12
+                            color: "black"
+                            font.bold: true
+                        }
+
+                        Connections {
+                            target: comboMuestra
+                            onCurrentIndexChanged: {
+                                lblCanchasM9_2.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 6));
+                            }
+                        }
+                    }
+
+                    MapPolygon {
+                        id: canchasM10
+                        color: "lightgreen"
+
+                        opacity: 0.5
+
+                        path: [
+                            { latitude: -38.7155439, longitude: -62.2070226 },
+                            { latitude: -38.715344, longitude: -62.2072694 },
+                            { latitude: -38.7151316, longitude: -62.2069985 },
+                            { latitude: -38.7153419, longitude: -62.2067437 }
+                        ]
+                        /*ToolTip.visible: estacienamientoMA.pressed
+                        ToolTip.text: "Estacionamiento"*/
+
+                        Connections {
+                            target: comboMuestra
+                            onCurrentIndexChanged: {
+                                canchasM10.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 7));
+                            }
+                        }
+                    }
+
+                    MapQuickItem {
+                        id: lblCanchasM10
+                        coordinate: QtPositioning.coordinate(-38.71534035, -62.20700855)
+/*                        anchorPoint.x: estacionamiento.Center.x
+                        anchorPoint.y: estacionamiento.Center.y*/
+                        anchorPoint.x: lCanchasM10.width / 2
+                        anchorPoint.y : lCanchasM10.height / 2
+                        sourceItem: Label {
+                            id: lCanchasM10
+                            text: "Cancha M10"
+                            font.pixelSize: 12
+                            color: "black"
+                            font.bold: true
+                        }
+
+                        Connections {
+                            target: comboMuestra
+                            onCurrentIndexChanged: {
+                                lblCanchasM10.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 7));
+                            }
+                        }
                     }
 
                     MapPolygon {
                         id: canchasM8M9
                     }
 
+
+
                     MapPolygon {
-                        id: canchasM10
+                        id: canchasM10_2
+                        color: "lightgreen"
+
+                        opacity: 0.5
+
+                        path: [
+                            { latitude: -38.7154623, longitude: -62.20772 },
+                            { latitude: -38.7152593, longitude: -62.2074518 },
+                            { latitude: -38.7155732, longitude: -62.2070655 },
+                            { latitude: -38.7157741, longitude: -62.2073418 }
+                        ]
+                        /*ToolTip.visible: estacienamientoMA.pressed
+                        ToolTip.text: "Estacionamiento"*/
+
+                        Connections {
+                            target: comboMuestra
+                            onCurrentIndexChanged: {
+                                canchasM10_2.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 7));
+                            }
+                        }
+                    }
+
+                    MapQuickItem {
+                        id: lblCanchasM10_2
+                        coordinate: QtPositioning.coordinate(-38.715517225, -62.207394775)
+/*                        anchorPoint.x: estacionamiento.Center.x
+                        anchorPoint.y: estacionamiento.Center.y*/
+                        anchorPoint.x: lCanchasM10_2.width / 2
+                        anchorPoint.y : lCanchasM10_2.height / 2
+                        sourceItem: Label {
+                            id: lCanchasM10_2
+                            text: "Cancha M10 2"
+                            font.pixelSize: 12
+                            color: "black"
+                            font.bold: true
+                        }
+
+                        Connections {
+                            target: comboMuestra
+                            onCurrentIndexChanged: {
+                                lblCanchasM10_2.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 7));
+                            }
+                        }
                     }
 
                     MapPolygon {
-                        id: canchasM11
+                        id: canchasM10_3
+                        color: "lightgreen"
+
+                        opacity: 0.5
+
+                        path: [
+                            { latitude: -38.7165662, longitude: -62.2075262 },
+                            { latitude: -38.7168561, longitude: -62.2078916 },
+                            { latitude: -38.7166426, longitude: -62.2081625 },
+                            { latitude: -38.7163454, longitude: -62.2078139 }
+                        ]
+                        /*ToolTip.visible: estacienamientoMA.pressed
+                        ToolTip.text: "Estacionamiento"*/
+
+                        Connections {
+                            target: comboMuestra
+                            onCurrentIndexChanged: {
+                                canchasM10_3.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 7));
+                            }
+                        }
+                    }
+
+                    MapQuickItem {
+                        id: lblCanchasM10_3
+                        coordinate: QtPositioning.coordinate(-38.716602575, -62.20784855)
+/*                        anchorPoint.x: estacionamiento.Center.x
+                        anchorPoint.y: estacionamiento.Center.y*/
+                        anchorPoint.x: lCanchasM10_3.width / 2
+                        anchorPoint.y : lCanchasM10_3.height / 2
+                        sourceItem: Label {
+                            id: lCanchasM10_3
+                            text: "Cancha M10 3"
+                            font.pixelSize: 12
+                            color: "black"
+                            font.bold: true
+                        }
+
+                        Connections {
+                            target: comboMuestra
+                            onCurrentIndexChanged: {
+                                lblCanchasM10_3.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 7));
+                            }
+                        }
+                    }
+
+
+                    MapPolygon {
+                        id: canchasM11_1
+                        color: "lightgreen"
+
+                        opacity: 0.5
+
+                        path: [
+                            { latitude: -38.716155, longitude: -62.2080714 },
+                            { latitude: -38.7164417, longitude: -62.2084308 },
+                            { latitude: -38.7166426, longitude: -62.2081625 },
+                            { latitude: -38.7163454, longitude: -62.2078139 }
+                        ]
+                        /*ToolTip.visible: estacienamientoMA.pressed
+                        ToolTip.text: "Estacionamiento"*/
+
+                        Connections {
+                            target: comboMuestra
+                            onCurrentIndexChanged: {
+                                canchasM11_1.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 8));
+                            }
+                        }
+                    }
+
+
+
+                    MapQuickItem {
+                        id: lblCanchasM11_1
+                        coordinate: QtPositioning.coordinate(-38.716396175, -62.20811965)
+/*                        anchorPoint.x: estacionamiento.Center.x
+                        anchorPoint.y: estacionamiento.Center.y*/
+                        anchorPoint.x: lCanchasM11_1.width / 2
+                        anchorPoint.y : lCanchasM11_1.height / 2
+                        sourceItem: Label {
+                            id: lCanchasM11_1
+                            text: "Cancha M11 1"
+                            font.pixelSize: 12
+                            color: "black"
+                            font.bold: true
+                        }
+
+                        Connections {
+                            target: comboMuestra
+                            onCurrentIndexChanged: {
+                                lblCanchasM11_1.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 8));
+                            }
+                        }
+                    }
+
+                    MapPolygon {
+                        id: canchasM11_2
+                        color: "lightgreen"
+
+                        opacity: 0.5
+
+                        path: [
+                            { latitude: -38.7166426, longitude: -62.2081625 },
+                            { latitude: -38.7169565, longitude: -62.2085354 },
+                            { latitude: -38.7167431, longitude: -62.2088143 },
+                            { latitude: -38.7164417, longitude: -62.2084308 }
+                        ]
+                        /*ToolTip.visible: estacienamientoMA.pressed
+                        ToolTip.text: "Estacionamiento"*/
+
+                        Connections {
+                            target: comboMuestra
+                            onCurrentIndexChanged: {
+                                canchasM11_2.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 8));
+                            }
+                        }
+                    }
+
+                    MapQuickItem {
+                        id: lblCanchasM11_2
+                        coordinate: QtPositioning.coordinate(-38.716695975, -62.20848575)
+/*                        anchorPoint.x: estacionamiento.Center.x
+                        anchorPoint.y: estacionamiento.Center.y*/
+                        anchorPoint.x: lCanchasM11_2.width / 2
+                        anchorPoint.y : lCanchasM11_2.height / 2
+                        sourceItem: Label {
+                            id: lCanchasM11_2
+                            text: "Cancha M11 2"
+                            font.pixelSize: 12
+                            color: "black"
+                            font.bold: true
+                        }
+
+                        Connections {
+                            target: comboMuestra
+                            onCurrentIndexChanged: {
+                                lblCanchasM11_2.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 8));
+                            }
+                        }
+                    }
+
+                    MapPolygon {
+                        id: canchasM11_3
+                        color: "lightgreen"
+
+                        opacity: 0.5
+
+                        path: [
+                            { latitude: -38.7166426, longitude: -62.2081625 },
+                            { latitude: -38.7168561, longitude: -62.2078916 },
+                            { latitude: -38.7171616, longitude: -62.2082645 },
+                            { latitude: -38.7169565, longitude: -62.2085354 }
+                        ]
+                        /*ToolTip.visible: estacienamientoMA.pressed
+                        ToolTip.text: "Estacionamiento"*/
+
+                        Connections {
+                            target: comboMuestra
+                            onCurrentIndexChanged: {
+                                canchasM11_3.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 8));
+                            }
+                        }
+                    }
+
+                    MapQuickItem {
+                        id: lblCanchasM11_3
+                        coordinate: QtPositioning.coordinate(-38.7169042, -62.2082135)
+/*                        anchorPoint.x: estacionamiento.Center.x
+                        anchorPoint.y: estacionamiento.Center.y*/
+                        anchorPoint.x: lCanchasM11_3.width / 2
+                        anchorPoint.y : lCanchasM11_3.height / 2
+                        sourceItem: Label {
+                            id: lCanchasM11_3
+                            text: "Cancha M11 3"
+                            font.pixelSize: 12
+                            color: "black"
+                            font.bold: true
+                        }
+
+                        Connections {
+                            target: comboMuestra
+                            onCurrentIndexChanged: {
+                                lblCanchasM11_3.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 8));
+                            }
+                        }
                     }
 
                     MapPolygon {
                         id: canchasM12
+                        color: "lightgreen"
+
+                        opacity: 0.5
+
+                        path: [
+                            { latitude: -38.7140768, longitude: -62.2068483 },
+                            { latitude: -38.7147716, longitude: -62.2059873 },
+                            { latitude: -38.7152258, longitude: -62.2066015 },
+                            { latitude: -38.7145247, longitude: -62.2074518 }
+                        ]
+                        /*ToolTip.visible: estacienamientoMA.pressed
+                        ToolTip.text: "Estacionamiento"*/
+
+                        Connections {
+                            target: comboMuestra
+                            onCurrentIndexChanged: {
+                                canchasM12.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 9));
+                            }
+                        }
+                    }
+
+                    MapQuickItem {
+                        id: lblCanchasM12
+                        coordinate: QtPositioning.coordinate(-38.714649725, -62.206722225)
+/*                        anchorPoint.x: estacionamiento.Center.x
+                        anchorPoint.y: estacionamiento.Center.y*/
+                        anchorPoint.x: lCanchasM12.width / 2
+                        anchorPoint.y : lCanchasM12.height / 2
+                        sourceItem: Label {
+                            id: lCanchasM12
+                            text: "Cancha M12"
+                            font.pixelSize: 12
+                            color: "black"
+                            font.bold: true
+                        }
+
+                        Connections {
+                            target: comboMuestra
+                            onCurrentIndexChanged: {
+                                lblCanchasM12.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 9));
+                            }
+                        }
+                    }
+
+                    MapPolygon {
+                        id: canchasM12_2
+                        color: "lightgreen"
+
+                        opacity: 0.5
+
+                        path: [
+                            { latitude: -38.715772, longitude: -62.207197 },
+                            { latitude: -38.7155355, longitude: -62.2068965 },
+                            { latitude: -38.7158327, longitude: -62.2064942 },
+                            { latitude: -38.7160859, longitude: -62.2067919 }
+
+                        ]
+                        /*ToolTip.visible: estacienamientoMA.pressed
+                        ToolTip.text: "Estacionamiento"*/
+
+                        Connections {
+                            target: comboMuestra
+                            onCurrentIndexChanged: {
+                                canchasM12_2.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 9));
+                            }
+                        }
+                    }
+
+                    MapQuickItem {
+                        id: lblCanchasM12_2
+                        coordinate: QtPositioning.coordinate(-38.715806525, -62.2068449)
+/*                        anchorPoint.x: estacionamiento.Center.x
+                        anchorPoint.y: estacionamiento.Center.y*/
+                        anchorPoint.x: lCanchasM12_2.width / 2
+                        anchorPoint.y : lCanchasM12_2.height / 2
+                        sourceItem: Label {
+                            id: lCanchasM12_2
+                            text: "Cancha M12 2"
+                            font.pixelSize: 12
+                            color: "black"
+                            font.bold: true
+                        }
+
+                        Connections {
+                            target: comboMuestra
+                            onCurrentIndexChanged: {
+                                lblCanchasM12_2.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 9));
+                            }
+                        }
                     }
 
                     MapPolygon {
                         id: canchasM13
+                        color: "lightgreen"
+
+                        opacity: 0.5
+
+                        path: [
+                            { latitude: -38.7143656, longitude: -62.2086212 },
+                            { latitude: -38.7135766, longitude: -62.2075886 },
+                            { latitude: -38.714058, longitude: -62.2069717 },
+                            { latitude: -38.7148574, longitude: -62.2080016 }
+                        ]
+                        /*ToolTip.visible: estacienamientoMA.pressed
+                        ToolTip.text: "Estacionamiento"*/
+
+                        Connections {
+                            target: comboMuestra
+                            onCurrentIndexChanged: {
+                                canchasM13.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 10));
+                            }
+                        }
+                    }
+
+                    MapQuickItem {
+                        id: lblCanchasM13
+                        coordinate: QtPositioning.coordinate(-38.7142144, -62.207795775)
+/*                        anchorPoint.x: estacionamiento.Center.x
+                        anchorPoint.y: estacionamiento.Center.y*/
+                        anchorPoint.x: lCanchasM13.width / 2
+                        anchorPoint.y : lCanchasM13.height / 2
+                        sourceItem: Label {
+                            id: lCanchasM13
+                            text: "Cancha M13"
+                            font.pixelSize: 12
+                            color: "black"
+                            font.bold: true
+                        }
+
+                        Connections {
+                            target: comboMuestra
+                            onCurrentIndexChanged: {
+                                lblCanchasM13.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 10));
+                            }
+                        }
                     }
 
                     MapPolygon {
-                        id: canchasM14
+                        id: canchasM13_2
+                        color: "lightgreen"
+
+                        opacity: 0.5
+
+                        path: [
+                            { latitude: -38.7150719, longitude: -62.2082001 },
+                            { latitude: -38.714802, longitude: -62.207838 },
+                            { latitude: -38.71514, longitude: -62.2074303 },
+                            { latitude: -38.7154058, longitude: -62.2077978 }
+                        ]
+                        /*ToolTip.visible: estacienamientoMA.pressed
+                        ToolTip.text: "Estacionamiento"*/
+
+                        Connections {
+                            target: comboMuestra
+                            onCurrentIndexChanged: {
+                                canchasM13_2.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 10));
+                            }
+                        }
                     }
+
+                    MapQuickItem {
+                        id: lblCanchasM13_2
+                        coordinate: QtPositioning.coordinate(-38.715104925, -62.20781655)
+/*                        anchorPoint.x: estacionamiento.Center.x
+                        anchorPoint.y: estacionamiento.Center.y*/
+                        anchorPoint.x: lCanchasM13_2.width / 2
+                        anchorPoint.y : lCanchasM13_2.height / 2
+                        sourceItem: Label {
+                            id: lCanchasM13_2
+                            text: "Cancha M13"
+                            font.pixelSize: 12
+                            color: "black"
+                            font.bold: true
+                        }
+
+                        Connections {
+                            target: comboMuestra
+                            onCurrentIndexChanged: {
+                                lblCanchasM13_2.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 10));
+                            }
+                        }
+                    }
+
+/*                    MapPolygon {
+                        id: canchaM14
+                        color: "lightgreen"
+
+                        opacity: 0.5
+
+                        path: [
+                            { latitude: -38.7125636, longitude: -62.2089028},
+                            { latitude: -38.7129697, longitude: -62.2093964 },
+                            { latitude: -38.7123795, longitude: -62.2101796 },
+                            { latitude: -38.711986, longitude: -62.2096753 }
+                        ]
+                        /*ToolTip.visible: estacienamientoMA.pressed
+                        ToolTip.text: "Estacionamiento"*-/
+
+                        Connections {
+                            target: comboMuestra
+                            onCurrentIndexChanged: {
+                                estacionamiento.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 1));
+                            }
+                        }
+                    }*/
 
                     MapCircle {
                         id: casitaAzul
