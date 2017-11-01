@@ -14,6 +14,47 @@ ApplicationWindow {
 
     property variant locationClub: QtPositioning.coordinate( -38.715921, -62.208452 )
 
+    property bool warningShown: false
+    property bool dontShowWarningAgain: false
+    property date lastDateTimeWarningShown: new Date("1/1/2017");
+
+    Dialog {
+        id: dlgWarning
+        visible: false
+        contentItem: Rectangle {
+            height: 500
+            color: "lightskyblue"
+            implicitWidth: 400
+            implicitHeight: cl1.height
+            ColumnLayout {
+                id: cl1
+                Text {
+                    id: txt
+                    width: 390
+                    color: "navy"
+                    text: "Atención Clubes
+
+Esperamos a las delegaciones a las 9:30, dado que
+a las 10:00 comenzará el encuentro con un acto en
+el que estarán presentes las autoridades del Club
+Argentino, autoridades Municipales y la banda del
+Ejército Argentino."
+                    textFormat: Text.AutoText
+                    font.pointSize: 12
+                    elide: Text.ElideMiddle
+                    Layout.fillWidth: false
+                }
+                CheckBox {
+                    id: check
+                    text: "Volver a mostrar más tarde"
+                    checked: true
+                    onCheckedChanged: {
+                        dontShowWarningAgain = !check.checked;
+                    }
+                }
+            }
+        }
+    }
 
     header: RowLayout {
         spacing: 2
@@ -1140,7 +1181,18 @@ ApplicationWindow {
         repeat: true
         onTriggered: {
             backgroundItem.toggle();
-            console.info("toggle");
+            if (!dontShowWarningAgain) {
+                var currentTime = new Date();
+                var delta = (currentTime.getTime() - lastDateTimeWarningShown.getTime()) / 1000 / 3600;
+                if (delta > 3) {
+                    lastDateTimeWarningShown = currentTime;
+                    warningShown = false;
+                }
+                if (!warningShown) {
+                    dlgWarning.open();
+                    warningShown = true;
+                }
+            }
         }
     }
 
