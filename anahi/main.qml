@@ -192,7 +192,8 @@ Ejército Argentino."
                                 "3er Tiempo",
                                 "Compras",
                                 "Escuelita",
-                                "M8-M9",
+                                "M8",
+                                "M9",
                                 "M10",
                                 "M11",
                                 "M12",
@@ -280,7 +281,7 @@ Ejército Argentino."
                     }
 
                     MapPolygon {
-                        id: canchasEscuelitaM8
+                        id: canchasM8
                         color: "lightgreen"
 
                         opacity: 0.5
@@ -295,19 +296,20 @@ Ejército Argentino."
                         Connections {
                             target: comboMuestra
                             onCurrentIndexChanged: {
-                                canchasEscuelitaM8.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 5));
+                                console.log(comboMuestra.currentIndex);
+                                canchasM8.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 6));
                             }
                         }
                     }
 
                     MapQuickItem {
-                        id: lblCanchasEscuelitaM8
+                        id: lblCanchasM8
                         coordinate: QtPositioning.coordinate(-38.7147928, -62.208318125)
-                        anchorPoint.x: lCanchasEscuelitaM8.width / 2
-                        anchorPoint.y : lCanchasEscuelitaM8.height / 2
+                        anchorPoint.x: lCanchasM8.width / 2
+                        anchorPoint.y : lCanchasM8.height / 2
                         sourceItem: Label {
-                            id: lCanchasEscuelitaM8
-                            text: "Cancha Escuelita y M8"
+                            id: lCanchasM8
+                            text: "Canchas M8"
                             font.pixelSize: 12
                             color: "black"
                             font.bold: true
@@ -316,13 +318,13 @@ Ejército Argentino."
                         Connections {
                             target: comboMuestra
                             onCurrentIndexChanged: {
-                                lblCanchasEscuelitaM8.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 5));
+                                lblCanchasM8.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 6));
                             }
                         }
                     }
 
                     MapPolygon {
-                        id: canchasM9
+                        id: canchasEscuelita
                         color: "lightgreen"
 
                         opacity: 0.5
@@ -337,19 +339,19 @@ Ejército Argentino."
                         Connections {
                             target: comboMuestra
                             onCurrentIndexChanged: {
-                                canchasM9.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 6));
+                                canchasEscuelita.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 5));
                             }
                         }
                     }
 
                     MapQuickItem {
-                        id: lblCanchasM9
+                        id: lblCanchasEscuelita
                         coordinate: QtPositioning.coordinate(-38.7148501, -62.207574475)
-                        anchorPoint.x: lblM9.width / 2
-                        anchorPoint.y : lblM9.height / 2
+                        anchorPoint.x: lblEscuelita.width / 2
+                        anchorPoint.y : lblEscuelita.height / 2
                         sourceItem: Label {
-                            id: lblM9
-                            text: "Cancha M9"
+                            id: lblEscuelita
+                            text: "Canchas Escuelita"
                             font.pixelSize: 12
                             color: "black"
                             font.bold: true
@@ -358,14 +360,14 @@ Ejército Argentino."
                         Connections {
                             target: comboMuestra
                             onCurrentIndexChanged: {
-                                lblCanchasM9.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 6));
+                                lblCanchasEscuelita.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 5));
                             }
                         }
                     }
 
 
                     MapPolygon {
-                        id: canchasM9_2
+                        id: canchasEscuelita_2
                         color: "lightgreen"
 
                         opacity: 0.5
@@ -380,19 +382,19 @@ Ejército Argentino."
                         Connections {
                             target: comboMuestra
                             onCurrentIndexChanged: {
-                                canchasM9_2.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 6));
+                                canchasEscuelita_2.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 5));
                             }
                         }
                     }
 
                     MapQuickItem {
-                        id: lblCanchasM9_2
+                        id: lblCanchasEscuelita_2
                         coordinate: QtPositioning.coordinate(-38.7151106, -62.207276625)
-                        anchorPoint.x: lblM9_2.width / 2
-                        anchorPoint.y : lblM9_2.height / 2
+                        anchorPoint.x: lblEscuelita_2.width / 2
+                        anchorPoint.y : lblEscuelita_2.height / 2
                         sourceItem: Label {
-                            id: lblM9_2
-                            text: "Cancha M9"
+                            id: lblEscuelita_2
+                            text: "Cancha Escuelita"
                             font.pixelSize: 12
                             color: "black"
                             font.bold: true
@@ -401,13 +403,13 @@ Ejército Argentino."
                         Connections {
                             target: comboMuestra
                             onCurrentIndexChanged: {
-                                lblCanchasM9_2.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 6));
+                                lblCanchasEscuelita_2.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 5));
                             }
                         }
                     }
 
                     MapPolygon {
-                        id: canchasM10
+                        id: canchasM11
                         color: "lightgreen"
 
                         opacity: 0.5
@@ -422,19 +424,19 @@ Ejército Argentino."
                         Connections {
                             target: comboMuestra
                             onCurrentIndexChanged: {
-                                canchasM10.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 7));
+                                canchasM11.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 9));
                             }
                         }
                     }
 
                     MapQuickItem {
-                        id: lblCanchasM10
+                        id: lblCanchasM11
                         coordinate: QtPositioning.coordinate(-38.71534035, -62.20700855)
-                        anchorPoint.x: lCanchasM10.width / 2
-                        anchorPoint.y : lCanchasM10.height / 2
+                        anchorPoint.x: lCanchasM11.width / 2
+                        anchorPoint.y : lCanchasM11.height / 2
                         sourceItem: Label {
-                            id: lCanchasM10
-                            text: "Cancha M10"
+                            id: lCanchasM11
+                            text: "Cancha M11"
                             font.pixelSize: 12
                             color: "black"
                             font.bold: true
@@ -443,19 +445,13 @@ Ejército Argentino."
                         Connections {
                             target: comboMuestra
                             onCurrentIndexChanged: {
-                                lblCanchasM10.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 7));
+                                lblCanchasM11.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 9));
                             }
                         }
                     }
 
                     MapPolygon {
-                        id: canchasM8M9
-                    }
-
-
-
-                    MapPolygon {
-                        id: canchasM10_2
+                        id: canchasM11_2
                         color: "lightgreen"
 
                         opacity: 0.5
@@ -470,19 +466,19 @@ Ejército Argentino."
                         Connections {
                             target: comboMuestra
                             onCurrentIndexChanged: {
-                                canchasM10_2.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 7));
+                                canchasM11_2.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 9));
                             }
                         }
                     }
 
                     MapQuickItem {
-                        id: lblCanchasM10_2
+                        id: lblCanchasM11_2
                         coordinate: QtPositioning.coordinate(-38.715517225, -62.207394775)
-                        anchorPoint.x: lCanchasM10_2.width / 2
-                        anchorPoint.y : lCanchasM10_2.height / 2
+                        anchorPoint.x: lCanchasM11_2.width / 2
+                        anchorPoint.y : lCanchasM11_2.height / 2
                         sourceItem: Label {
-                            id: lCanchasM10_2
-                            text: "Cancha M10 2"
+                            id: lCanchasM11_2
+                            text: "Cancha M11 2"
                             font.pixelSize: 12
                             color: "black"
                             font.bold: true
@@ -491,13 +487,13 @@ Ejército Argentino."
                         Connections {
                             target: comboMuestra
                             onCurrentIndexChanged: {
-                                lblCanchasM10_2.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 7));
+                                lblCanchasM11_2.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 9));
                             }
                         }
                     }
 
                     MapPolygon {
-                        id: canchasM10_3
+                        id: canchasM9
                         color: "lightgreen"
 
                         opacity: 0.5
@@ -512,19 +508,19 @@ Ejército Argentino."
                         Connections {
                             target: comboMuestra
                             onCurrentIndexChanged: {
-                                canchasM10_3.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 7));
+                                canchasM9.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 7));
                             }
                         }
                     }
 
                     MapQuickItem {
-                        id: lblCanchasM10_3
+                        id: lblCanchasM9
                         coordinate: QtPositioning.coordinate(-38.716602575, -62.20784855)
-                        anchorPoint.x: lCanchasM10_3.width / 2
-                        anchorPoint.y : lCanchasM10_3.height / 2
+                        anchorPoint.x: lCanchasM9.width / 2
+                        anchorPoint.y : lCanchasM9.height / 2
                         sourceItem: Label {
-                            id: lCanchasM10_3
-                            text: "Cancha M10 3"
+                            id: lCanchasM9
+                            text: "3Canchas M9"
                             font.pixelSize: 12
                             color: "black"
                             font.bold: true
@@ -533,14 +529,14 @@ Ejército Argentino."
                         Connections {
                             target: comboMuestra
                             onCurrentIndexChanged: {
-                                lblCanchasM10_3.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 7));
+                                lblCanchasM9.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 7));
                             }
                         }
                     }
 
 
                     MapPolygon {
-                        id: canchasM11_1
+                        id: canchasM10
                         color: "lightgreen"
 
                         opacity: 0.5
@@ -555,7 +551,7 @@ Ejército Argentino."
                         Connections {
                             target: comboMuestra
                             onCurrentIndexChanged: {
-                                canchasM11_1.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 8));
+                                canchasM10.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 8));
                             }
                         }
                     }
@@ -563,13 +559,13 @@ Ejército Argentino."
 
 
                     MapQuickItem {
-                        id: lblCanchasM11_1
+                        id: lblCanchasM10
                         coordinate: QtPositioning.coordinate(-38.716396175, -62.20811965)
-                        anchorPoint.x: lCanchasM11_1.width / 2
-                        anchorPoint.y : lCanchasM11_1.height / 2
+                        anchorPoint.x: lCanchasM10.width / 2
+                        anchorPoint.y : lCanchasM10.height / 2
                         sourceItem: Label {
-                            id: lCanchasM11_1
-                            text: "Cancha M11 1"
+                            id: lCanchasM10
+                            text: "3 Canchas M10"
                             font.pixelSize: 12
                             color: "black"
                             font.bold: true
@@ -578,13 +574,13 @@ Ejército Argentino."
                         Connections {
                             target: comboMuestra
                             onCurrentIndexChanged: {
-                                lblCanchasM11_1.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 8));
+                                lblCanchasM10.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 8));
                             }
                         }
                     }
 
-                    MapPolygon {
-                        id: canchasM11_2
+/*                    MapPolygon {
+                        id: canchasM11_22
                         color: "lightgreen"
 
                         opacity: 0.5
@@ -599,18 +595,18 @@ Ejército Argentino."
                         Connections {
                             target: comboMuestra
                             onCurrentIndexChanged: {
-                                canchasM11_2.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 8));
+                                canchasM11_22.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 8));
                             }
                         }
                     }
 
                     MapQuickItem {
-                        id: lblCanchasM11_2
+                        id: lblCanchasM11_22
                         coordinate: QtPositioning.coordinate(-38.716695975, -62.20848575)
-                        anchorPoint.x: lCanchasM11_2.width / 2
-                        anchorPoint.y : lCanchasM11_2.height / 2
+                        anchorPoint.x: lCanchasM11_22.width / 2
+                        anchorPoint.y : lCanchasM11_22.height / 2
                         sourceItem: Label {
-                            id: lCanchasM11_2
+                            id: lCanchasM11_22
                             text: "Cancha M11 2"
                             font.pixelSize: 12
                             color: "black"
@@ -620,12 +616,12 @@ Ejército Argentino."
                         Connections {
                             target: comboMuestra
                             onCurrentIndexChanged: {
-                                lblCanchasM11_2.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 8));
+                                lblCanchasM11_22.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 8));
                             }
                         }
                     }
-
-                    MapPolygon {
+*/
+/*                    MapPolygon {
                         id: canchasM11_3
                         color: "lightgreen"
 
@@ -666,7 +662,7 @@ Ejército Argentino."
                             }
                         }
                     }
-
+*/
                     MapPolygon {
                         id: canchasM12
                         color: "lightgreen"
@@ -683,7 +679,7 @@ Ejército Argentino."
                         Connections {
                             target: comboMuestra
                             onCurrentIndexChanged: {
-                                canchasM12.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 9));
+                                canchasM12.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 10));
                             }
                         }
                     }
@@ -704,7 +700,7 @@ Ejército Argentino."
                         Connections {
                             target: comboMuestra
                             onCurrentIndexChanged: {
-                                lblCanchasM12.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 9));
+                                lblCanchasM12.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 10));
                             }
                         }
                     }
@@ -726,7 +722,7 @@ Ejército Argentino."
                         Connections {
                             target: comboMuestra
                             onCurrentIndexChanged: {
-                                canchasM12_2.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 9));
+                                canchasM12_2.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 10));
                             }
                         }
                     }
@@ -747,7 +743,7 @@ Ejército Argentino."
                         Connections {
                             target: comboMuestra
                             onCurrentIndexChanged: {
-                                lblCanchasM12_2.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 9));
+                                lblCanchasM12_2.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 10));
                             }
                         }
                     }
@@ -768,7 +764,7 @@ Ejército Argentino."
                         Connections {
                             target: comboMuestra
                             onCurrentIndexChanged: {
-                                canchasM13.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 10));
+                                canchasM13.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 11));
                             }
                         }
                     }
@@ -789,7 +785,7 @@ Ejército Argentino."
                         Connections {
                             target: comboMuestra
                             onCurrentIndexChanged: {
-                                lblCanchasM13.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 10));
+                                lblCanchasM13.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 11));
                             }
                         }
                     }
@@ -810,7 +806,7 @@ Ejército Argentino."
                         Connections {
                             target: comboMuestra
                             onCurrentIndexChanged: {
-                                canchasM13_2.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 10));
+                                canchasM13_2.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 11));
                             }
                         }
                     }
@@ -831,7 +827,7 @@ Ejército Argentino."
                         Connections {
                             target: comboMuestra
                             onCurrentIndexChanged: {
-                                lblCanchasM13_2.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 10));
+                                lblCanchasM13_2.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 11));
                             }
                         }
                     }
@@ -862,7 +858,66 @@ Ejército Argentino."
                         Connections {
                             target: comboMuestra
                             onCurrentIndexChanged: {
-                                casitaAzul.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 5));
+                                casitaAzul.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 4));
+                            }
+                        }
+                    }
+
+                    MapQuickItem {
+                        id: salaMedica
+                        coordinate: QtPositioning.coordinate(-38.71491395, -62.20711515)
+
+                        anchorPoint.x: lcasitaAzul.width / 2
+                        anchorPoint.y : lcasitaAzul.height / 2
+                        sourceItem: ColumnLayout {
+                            Image {
+                                width: 10
+                                height: 10
+                                fillMode: Image.PreserveAspectFit
+                                source: "qrc:/ui/salaMedica.png"
+                            }
+                            Label {
+                            id: lSalaMedica
+                            text: "Informacion\nSalaMedica"
+                            font.pixelSize: 12
+                            color: "black"
+                            font.bold: true
+                            }
+                        }
+
+                        Connections {
+                            target: comboMuestra
+                            onCurrentIndexChanged: {
+                                casitaAzul.visible = (comboMuestra.currentIndex == 0);
+                            }
+                        }
+                    }
+
+                    MapQuickItem {
+                        id: controlCentral
+                        coordinate: QtPositioning.coordinate(-38.7152258, -62.2067356)
+                        anchorPoint.x: lcontrolCentral.width / 2
+                        anchorPoint.y : -lcontrolCentral.height / 2
+                        sourceItem: ColumnLayout {
+                            Image {
+                                id: imageControlCentral
+                                width: 100
+                                height: 100
+                                source: "qrc:/ui/controlCentral.png"
+                            }
+                            Label {
+                            id: lcontrolCentral
+                            text: "Control Central"
+                            font.pixelSize: 12
+                            color: "black"
+                            font.bold: true
+                            }
+                        }
+
+                        Connections {
+                            target: comboMuestra
+                            onCurrentIndexChanged: {
+                                controlCentral.visible = (comboMuestra.currentIndex == 0)
                             }
                         }
                     }
@@ -891,40 +946,12 @@ Ejército Argentino."
                         Connections {
                             target: comboMuestra
                             onCurrentIndexChanged: {
-                                clubHouse.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 5));
+                                clubHouse.visible = ((comboMuestra.currentIndex == 0) || (comboMuestra.currentIndex == 4));
                             }
                         }
                     }
 
 
-                    MapQuickItem {
-                        id: controlCentral
-                        coordinate: QtPositioning.coordinate(-38.7152258, -62.2067356)
-                        anchorPoint.x: lcontrolCentral.width / 2
-                        anchorPoint.y : lcontrolCentral.height / 2
-                        sourceItem: ColumnLayout {
-                            Image {
-                                id: imageControlCentral
-                                width: 100
-                                height: 100
-                                source: "qrc:/ui/controlCentral.png"
-                            }
-                            Label {
-                            id: lcontrolCentral
-                            text: "Control Central"
-                            font.pixelSize: 12
-                            color: "black"
-                            font.bold: true
-                            }
-                        }
-
-                        Connections {
-                            target: comboMuestra
-                            onCurrentIndexChanged: {
-                                controlCentral.visible = (comboMuestra.currentIndex == 0)
-                            }
-                        }
-                    }
 
                     MapQuickItem {
                         id: banios1

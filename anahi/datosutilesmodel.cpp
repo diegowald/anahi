@@ -43,6 +43,8 @@ DatosUtilesModel::DatosUtilesModel(QObject *parent ) : QAbstractListModel(parent
     m_datoUtil.append( { "Mariano De Luca", "", "Bahia Blanca" , "+5492914631828", "Entrenador M13", DatoUtilType::WhatsApp, QDateTime(QDate(2017, 10, 27), QTime(0, 0, 0)), QDateTime(QDate(2017, 11, 7), QTime(23, 59, 59)) });
 
     m_datoUtil.append( { "Marcelo Spikerman", "", "Bahia Blanca" , "+549291416479", "Entrenador M14", DatoUtilType::WhatsApp, QDateTime(QDate(2017, 10, 27), QTime(0, 0, 0)), QDateTime(QDate(2017, 11, 7), QTime(23, 59, 59)) });
+    m_datoUtil.append( { "Nicolás Benedetti", "", "Bahia Blanca" , "", "Entrenador M14", DatoUtilType::WhatsApp, QDateTime(QDate(2017, 10, 27), QTime(0, 0, 0)), QDateTime(QDate(2017, 11, 7), QTime(23, 59, 59)) });
+    m_datoUtil.append( { "Bruno Stacco", "", "Bahia Blanca" , "", "Entrenador M14", DatoUtilType::WhatsApp, QDateTime(QDate(2017, 10, 27), QTime(0, 0, 0)), QDateTime(QDate(2017, 11, 7), QTime(23, 59, 59)) });
 
     m_datoUtil.append( { "Acerca de la aplicación", "", "", "", "Créditos", DatoUtilType::About, QDateTime(QDate(2017, 10, 27), QTime(0, 0, 0)), QDateTime(QDate(2017, 12, 31), QTime(23, 59, 59)) });
 }
