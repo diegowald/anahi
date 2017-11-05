@@ -1208,6 +1208,7 @@ Ejército Argentino."
         repeat: true
         onTriggered: {
             backgroundItem.toggle();
+            /*
             if (!dontShowWarningAgain) {
                 var currentTime = new Date();
                 var delta = (currentTime.getTime() - lastDateTimeWarningShown.getTime()) / 1000 / 3600;
@@ -1219,7 +1220,7 @@ Ejército Argentino."
                     dlgWarning.open();
                     warningShown = true;
                 }
-            }
+            }*/
         }
     }
 
